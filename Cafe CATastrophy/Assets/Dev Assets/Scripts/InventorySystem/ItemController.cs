@@ -14,9 +14,6 @@ public class ItemController : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (interactScript.interactedWith == true)
-        {
             inventoryManager.AddItem(inventoryItem);
-        }
     }
 }
