@@ -390,7 +390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemController
   inventoryItem: {fileID: 11400000, guid: 478e6d4f47f638e4085bc1e5b01d7302, type: 2}
   inventoryManager: {fileID: 992523321}
-  interactScript: {fileID: 0}
+  interactScript: {fileID: 1387823965}
+  inRange: 0
 --- !u!1 &984902986
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +538,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   playerInputObj: {fileID: 0}
-  interactedWith: 0
+  itemController: {fileID: 0}
 --- !u!1 &1388243716
 GameObject:
   m_ObjectHideFlags: 0

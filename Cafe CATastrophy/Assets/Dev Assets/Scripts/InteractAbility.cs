@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,28 +7,21 @@ public class InteractAbility : MonoBehaviour
 {
     [SerializeField] private LayerMask interactableLayer;
     public PlayerInput playerInputObj;
-    private Transform playerTransform;
+
+    public ItemController itemController;
+    public InventoryManager inventoryManager;
 
     private void Awake()
     {
-        playerInputObj = GetComponent<PlayerInput>();
+        itemController = GetComponent<ItemController>();
+        inventoryManager = GameObject.Find("Player").GetComponent<InventoryManager>();
+        playerInputObj = GameObject.Find("Player").GetComponent<PlayerInput>();
     }
-    private void OnEnable()
+    public void DoInteract(InputAction.CallbackContext context)
     {
-        playerInputObj.actions["Interact"].performed += DoInteract;
-    }
-
-    private void OnDisable()
-    {
-        playerInputObj.actions["Interact"].performed -= DoInteract;
-    }
-    private void DoInteract(InputAction.CallbackContext context)
-    {
-        Debug.Log("interacted");
-        if (!Physics.Raycast(playerTransform.position + (Vector3.up * 0.3f) + (playerTransform.forward * 0.2f), playerTransform.forward, out RaycastHit hitInfo, 2f, interactableLayer))
+        if (context.performed && itemController.inRange)
         {
-            return;
-            //if nothing is hit, don't use the raycast
+            inventoryManager.AddItem(itemController.inventoryItem);
         }
     }
 }

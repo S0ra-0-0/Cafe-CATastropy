@@ -8,7 +8,6 @@ public class PlayerGD1 : MonoBehaviour
     public PlayerInput PlayerInputObj;
 
     public Material[] Colors;
-
     private void Start()
     {
         GetComponent<MeshRenderer>().material = Colors[PlayerInputObj.playerIndex];
