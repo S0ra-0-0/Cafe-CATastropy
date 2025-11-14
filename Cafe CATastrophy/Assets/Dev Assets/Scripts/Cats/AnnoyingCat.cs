@@ -19,7 +19,7 @@ public class AnnoyingCat : CatBaseClass
         base.Update();
         if (currentState == CatState.Moving)
         {
-            //CheckForBroom();
+            CheckForBroom();
             SitRandomly();
         }
     }
@@ -43,9 +43,12 @@ public class AnnoyingCat : CatBaseClass
         }
     }
 
+    private void CheckForBroom()
+    {
+        // Placeholder for broom detection logic
+        // If broom is detected and playerHasBroom is true, call Flee()
 
-
-
+    }
 
     public override void Action() { }
 

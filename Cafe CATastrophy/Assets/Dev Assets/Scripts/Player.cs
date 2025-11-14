@@ -8,8 +8,12 @@ public class PlayerGD1 : MonoBehaviour
     public PlayerInput PlayerInputObj;
 
     public Material[] Colors;
+
+    private Rigidbody rb;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         GetComponent<MeshRenderer>().material = Colors[PlayerInputObj.playerIndex];
     }
 
@@ -22,6 +26,6 @@ public class PlayerGD1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(m_Movement * Time.deltaTime * 10);
+        rb.linearVelocity = new Vector3(m_Movement.x * 10, rb.linearVelocity.y, m_Movement.z * 10);
     }
 }
