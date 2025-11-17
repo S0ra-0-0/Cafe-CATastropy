@@ -7,6 +7,7 @@ public class ItemController : MonoBehaviour
     public InteractAbility interactScript;
 
     public bool inRange;
+    [SerializeField] GameObject itemOnCounter;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -20,9 +21,15 @@ public class ItemController : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (interactScript.isInteracting)
+        if (interactScript.isInteracting && inventoryItem)
         {
             inventoryManager.AddItem(inventoryItem);
+        }
+        if (interactScript.isInteracting && !inventoryItem)
+        {
+            Instantiate(inventoryManager.Items[0], itemOnCounter.transform);
+            inventoryManager.Items.RemoveAt(0);
+            //item neerzetten op counter
         }
     }
 
