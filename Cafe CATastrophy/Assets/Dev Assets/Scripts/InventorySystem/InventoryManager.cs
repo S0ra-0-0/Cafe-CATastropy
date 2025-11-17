@@ -7,9 +7,10 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
     public List<InventoryItems> Items = new List<InventoryItems>();
 
-    private void Awake()
+    public void Awake()
     {
-        Instance = this;
+        //clear inventory when game starts
+        Items.Clear();
     }
 
     public void AddItem(InventoryItems item)

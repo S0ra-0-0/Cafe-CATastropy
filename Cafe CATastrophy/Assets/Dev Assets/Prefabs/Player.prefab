@@ -15,10 +15,11 @@ GameObject:
   - component: {fileID: -3488552837205601264}
   - component: {fileID: 6971325779660612010}
   - component: {fileID: 5640299337594722586}
+  - component: {fileID: -6865768643089650075}
   - component: {fileID: 3632713504639085599}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,8 +176,22 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 0
-  playerInputObj: {fileID: 0}
-  isInteracting: 0
+  playerInputObj: {fileID: 3632713504639085599}
+  itemController: {fileID: 0}
+  inventoryManager: {fileID: -6865768643089650075}
+--- !u!114 &-6865768643089650075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949504275919915996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a808ce1cf7c383a49bd47ce5ba897a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  Items: []
 --- !u!114 &3632713504639085599
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -96,7 +96,7 @@
                     "name": "",
                     "id": "48c4759b-de57-4257-9aee-c6c97507f07d",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": ";Keyboard",
                     "action": "Interact",
