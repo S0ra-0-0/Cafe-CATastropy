@@ -74,27 +74,27 @@ public abstract class CatTesting : MonoBehaviour
         switch (state)
         {
             case CatState.OnConveyor:
-                OnConveyorTick();
+                OnConveyorUpdate();
                 break;
 
             case CatState.JumpOff:
-                JumpOffTick();
+                JumpOffUpdate();
                 break;
 
             case CatState.Wander:
-                WanderTick();
+                WanderUpdate();
                 break;
 
             case CatState.Flee:
-                FleeTick();
+                FleeUpdate();
                 break;
 
             case CatState.JumpOn:
-                JumpOnTick();
+                JumpOnUpdate();
                 break;
 
             case CatState.Despawn:
-                DespawnTick();
+                DespawnUpdate();
                 break;
         }
     }
@@ -143,7 +143,7 @@ public abstract class CatTesting : MonoBehaviour
             }
         }
     }
-    protected virtual void OnConveyorTick()
+    protected virtual void OnConveyorUpdate()
     {
        
     
@@ -159,7 +159,7 @@ public abstract class CatTesting : MonoBehaviour
     }
 
 
-    protected virtual void JumpOffTick()
+    protected virtual void JumpOffUpdate()
     {
         jumpTimer += Time.deltaTime;
 
@@ -190,7 +190,7 @@ public abstract class CatTesting : MonoBehaviour
 
 
 
-    protected virtual void WanderTick()
+    protected virtual void WanderUpdate()
     {
         if (!agent.pathPending && agent.remainingDistance < 1f)
         {
@@ -222,7 +222,7 @@ public abstract class CatTesting : MonoBehaviour
     }
 
 
-    protected virtual void FleeTick()
+    protected virtual void FleeUpdate()
     {
         Vector3 target = GetFleeTarget();
 
@@ -244,7 +244,7 @@ public abstract class CatTesting : MonoBehaviour
     }
 
 
-    protected virtual void JumpOnTick()
+    protected virtual void JumpOnUpdate()
     {
         jumpTimer += Time.deltaTime;
 
@@ -270,7 +270,7 @@ public abstract class CatTesting : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    protected virtual void DespawnTick() { }
+    protected virtual void DespawnUpdate() { }
 
     protected void MoveTowards(Vector3 target, float speed)
     {
