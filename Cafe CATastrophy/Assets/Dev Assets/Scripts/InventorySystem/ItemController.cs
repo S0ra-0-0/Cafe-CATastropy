@@ -27,11 +27,11 @@ public class ItemController : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (interactScript.isInteracting && inventoryItem)
+        if (interactScript.isInteracting && inventoryItem) //object can give an item (machine) so pick it up
         {
             inventoryManager.AddItem(inventoryItem);
         }
-        if (interactScript.isInteracting && !inventoryItem)
+        if (interactScript.isInteracting && !inventoryItem) //no item to give by object, meaning something can be put down
         {
             itemOnCounter = inventoryManager.Items[0];
             Instantiate(itemOnCounter.itemPrefab, counterPosition.position, counterPosition.rotation);
