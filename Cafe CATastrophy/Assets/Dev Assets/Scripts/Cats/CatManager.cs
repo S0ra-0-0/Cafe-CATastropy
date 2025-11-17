@@ -7,9 +7,9 @@ public class CatManager : MonoBehaviour
     [SerializeField] private Vector3 spawnLocation;
     [SerializeField] private GameObject[] catPrefab;
     [SerializeField] private int maxNumberOfCats = 3;
-    [SerializeField] private float spawnInterval = 5f;
+    [SerializeField] private float spawnInterval = 4f;
 
-    private int currentNumberOfCats = 0;
+    public int currentNumberOfCats = 0;
     private void Update()
     {
         if (currentNumberOfCats < maxNumberOfCats)
@@ -21,6 +21,8 @@ public class CatManager : MonoBehaviour
                 spawnInterval = 5f; // Reset spawn interval
             }
         }
+
+
     }
     private void SpawnCat()
     {

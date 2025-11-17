@@ -1,16 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AnnoyingCat : CatBaseClass
 {
     private float sitTimer;
     private bool isSitting;
-    private Transform player;
     private bool playerHasBroom;
+    public bool testFlee = false;
 
     protected override void Start()
     {
         base.Start();
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
         sitTimer = Random.Range(1f, 5f);
     }
 
@@ -18,9 +18,14 @@ public class AnnoyingCat : CatBaseClass
     {
         base.Update();
         if (currentState == CatState.Moving)
+        { 
+            //SitRandomly(); // Uncomment if you want the cat to sit randomly
+        }
+
+        if (testFlee)
         {
-            CheckForBroom();
-            SitRandomly();
+            currentState = CatState.Fleeing;
+            testFlee = false;
         }
     }
 
@@ -43,18 +48,10 @@ public class AnnoyingCat : CatBaseClass
         }
     }
 
-    private void CheckForBroom()
-    {
-        // Placeholder for broom detection logic
-        // If broom is detected and playerHasBroom is true, call Flee()
-
-    }
-
     public override void Action() { }
 
     protected override void Flee()
     {
-        FindRandomLocation();
-        currentState = CatState.Moving;
+        base.Flee();
     }
 }

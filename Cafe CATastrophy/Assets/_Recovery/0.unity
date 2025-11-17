@@ -3159,7 +3159,7 @@ MonoBehaviour:
   catPrefab:
   - {fileID: 2723490280315936478, guid: dbb6b9a8f1aea454581f8716df59c06b, type: 3}
   maxNumberOfCats: 2
-  spawnInterval: 4
+  spawnInterval: 2
   currentNumberOfCats: 0
 --- !u!43 &1318695087
 Mesh:
