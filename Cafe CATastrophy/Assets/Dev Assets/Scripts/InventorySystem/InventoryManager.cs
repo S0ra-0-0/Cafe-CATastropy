@@ -13,6 +13,15 @@ public class InventoryManager : MonoBehaviour
         Items.Clear();
     }
 
+    public void Update()
+    {
+        if (Items.Count > 1)
+        {
+            //limit inventory size to 1
+            Items.RemoveAt(1);
+        }
+    }
+
     public void AddItem(InventoryItems item)
     {
         Items.Add(item);
