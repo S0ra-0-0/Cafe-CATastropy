@@ -7,8 +7,14 @@ public class ItemController : MonoBehaviour
     public InteractAbility interactScript;
 
     public bool inRange;
-    [SerializeField] GameObject itemOnCounter;
+    [SerializeField] InventoryItems itemOnCounter;
+    private GameObject counterItemInstance;
+    public Transform counterPosition;
 
+    private void Start()
+    {
+        counterItemInstance = itemOnCounter.itemPrefab;
+    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -27,7 +33,8 @@ public class ItemController : MonoBehaviour
         }
         if (interactScript.isInteracting && !inventoryItem)
         {
-            Instantiate(inventoryManager.Items[0], itemOnCounter.transform);
+            itemOnCounter = inventoryManager.Items[0];
+            Instantiate(itemOnCounter.itemPrefab, counterPosition.position, counterPosition.rotation);
             inventoryManager.Items.RemoveAt(0);
             //item neerzetten op counter
         }
