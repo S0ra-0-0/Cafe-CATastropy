@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 
-public class ItemController : MonoBehaviour
+public class CounterFunctionality : MonoBehaviour
 {
     public InventoryItems inventoryItem;
     public InventoryManager inventoryManager;
@@ -28,10 +28,18 @@ public class ItemController : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (interactScript.isInteracting && inventoryItem) //object can give an item (machine) so pick it up
-        {
-            inventoryManager.AddItem(inventoryItem);
-        }
+            for (int i = 0; i < counterPosition.Length; i++)
+            {
+                if (counterPosition[i].childCount == 0 && interactScript.isInteracting && inventoryManager.Items.Count > 0)
+                    //check if player is interacting, has item, and counter position is empty
+                {
+                    Debug.Log("put down item");
+                    itemOnCounter = inventoryManager.Items[0];
+                    Instantiate(itemOnCounter.itemPrefab, counterPosition[i]);
+                    inventoryManager.Items.RemoveAt(0);
+                    break; //exit loop after placing item
+                }
+            }
     }
 
     public void OnTriggerExit(Collider other)
