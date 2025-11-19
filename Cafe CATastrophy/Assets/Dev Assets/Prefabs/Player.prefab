@@ -143,7 +143,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &6971325779660612010
 MonoBehaviour:
@@ -177,8 +177,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   playerInputObj: {fileID: 3632713504639085599}
-  itemController: {fileID: 0}
   inventoryManager: {fileID: -6865768643089650075}
+  isInteracting: 0
 --- !u!114 &-6865768643089650075
 MonoBehaviour:
   m_ObjectHideFlags: 0

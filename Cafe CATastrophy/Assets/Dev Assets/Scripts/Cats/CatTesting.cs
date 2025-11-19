@@ -155,7 +155,7 @@ public abstract class CatTesting : MonoBehaviour
 
         jumpTimer = 0f;
         jumpStart = transform.position;
-        jumpEnd = transform.position + transform.forward * -5f;
+        jumpEnd = transform.position + transform.right * -5f;
     }
 
 
@@ -252,7 +252,6 @@ public abstract class CatTesting : MonoBehaviour
 
         if (t >= 1f)
         {
-            Debug.Log("Cat despawning");
             velocity = Vector3.zero;
 
             //EnterState(CatState.Despawn);
