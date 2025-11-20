@@ -254,7 +254,6 @@ public abstract class CatTesting : MonoBehaviour
         {
             velocity = Vector3.zero;
 
-            //EnterState(CatState.Despawn);
             return;
         }
 
