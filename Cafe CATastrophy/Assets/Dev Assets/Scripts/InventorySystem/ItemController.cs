@@ -9,6 +9,17 @@ public class ItemController : MonoBehaviour
 
     public bool inRange;
 
+    private float cooldownTimer = 0;
+
+    public void Update()
+    {
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+            Debug.Log(cooldownTimer);
+        }
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -21,9 +32,10 @@ public class ItemController : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (interactScript.isInteracting && inventoryItem) //object can give an item (machine) so pick it up
+        if (cooldownTimer <= 0 && interactScript.isInteracting && inventoryItem) //object can give an item (machine) so pick it up
         {
             inventoryManager.AddItem(inventoryItem);
+            cooldownTimer = 2;
         }
     }
 
