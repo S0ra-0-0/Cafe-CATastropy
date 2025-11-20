@@ -19,11 +19,10 @@ public class PlayerGD1 : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        m_Movement.x = context.ReadValue<Vector2>().x;
-        m_Movement.z = context.ReadValue<Vector2>().y;
+        m_Movement.z = context.ReadValue<Vector2>().x * -1;
+        m_Movement.x = context.ReadValue<Vector2>().y;
     }
 
-    // Update is called once per frame
     void Update()
     {
         rb.linearVelocity = new Vector3(m_Movement.x * 10, rb.linearVelocity.y, m_Movement.z * 10);
