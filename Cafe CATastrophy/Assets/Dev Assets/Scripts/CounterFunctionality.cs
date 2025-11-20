@@ -9,13 +9,8 @@ public class CounterFunctionality : MonoBehaviour
 
     public bool inRange;
     [SerializeField] InventoryItems itemOnCounter;
-    private GameObject counterItemInstance;
     public Transform[] counterPosition;
 
-    private void Start()
-    {
-        counterItemInstance = itemOnCounter.itemPrefab;
-    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -28,12 +23,13 @@ public class CounterFunctionality : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-            for (int i = 0; i < counterPosition.Length; i++)
+        Debug.Log("player in range of counter");
+        for (int i = 0; i < counterPosition.Length; i++)
             {
-                if (counterPosition[i].childCount == 0 && interactScript.isInteracting && inventoryManager.Items.Count > 0)
-                    //check if player is interacting, has item, and counter position is empty
+            //check if counter pos is empty, player is interacting and player has item to put down
+                if (counterPosition[i].childCount <= 1 && interactScript.isInteracting && inventoryManager.Items.Count > 0)
                 {
-                    Debug.Log("put down item");
+                Debug.Log("put down item");
                     itemOnCounter = inventoryManager.Items[0];
                     Instantiate(itemOnCounter.itemPrefab, counterPosition[i]);
                     inventoryManager.Items.RemoveAt(0);

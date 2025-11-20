@@ -8,14 +8,7 @@ public class ItemController : MonoBehaviour
     public InteractAbility interactScript;
 
     public bool inRange;
-    [SerializeField] InventoryItems itemOnCounter;
-    private GameObject counterItemInstance;
-    public Transform[] counterPosition;
 
-    private void Start()
-    {
-        counterItemInstance = itemOnCounter.itemPrefab;
-    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
