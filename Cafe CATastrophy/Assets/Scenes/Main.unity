@@ -377,7 +377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 138472393}
   - component: {fileID: 138472395}
-  - component: {fileID: 138472394}
   m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
@@ -400,24 +399,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1230950826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &138472394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138472392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631ba5a178e2ebf48a81cca1e57a5817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  inventoryItem: {fileID: 11400000, guid: 5be6df61ec85a6341ad90c38d192e548, type: 2}
-  inventoryManager: {fileID: 0}
-  interactScript: {fileID: 0}
-  inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &138472395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1826,7 +1807,6 @@ GameObject:
   m_Component:
   - component: {fileID: 595102213}
   - component: {fileID: 595102215}
-  - component: {fileID: 595102214}
   m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
@@ -1849,24 +1829,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 889296532}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &595102214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595102212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631ba5a178e2ebf48a81cca1e57a5817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  inventoryItem: {fileID: 11400000, guid: 5be6df61ec85a6341ad90c38d192e548, type: 2}
-  inventoryManager: {fileID: 0}
-  interactScript: {fileID: 0}
-  inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &595102215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1898,6 +1860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 598017658}
   - component: {fileID: 598017659}
+  - component: {fileID: 598017660}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -1943,6 +1906,22 @@ CapsuleCollider:
   m_Height: 2.0401037
   m_Direction: 1
   m_Center: {x: -0.21664494, y: 0.22650445, z: -0.07690257}
+--- !u!114 &598017660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598017657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4ff6d319e793648b85c72970887432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashCan
+  inventoryItem: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  interactScript: {fileID: 0}
+  inRange: 0
 --- !u!1 &626484563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6036,6 +6015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1391791621}
   - component: {fileID: 1391791622}
+  - component: {fileID: 1391791623}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -6081,6 +6061,22 @@ CapsuleCollider:
   m_Height: 2.0401037
   m_Direction: 1
   m_Center: {x: -0.21664494, y: 0.22650445, z: -0.07690257}
+--- !u!114 &1391791623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391791620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4ff6d319e793648b85c72970887432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashCan
+  inventoryItem: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  interactScript: {fileID: 0}
+  inRange: 0
 --- !u!1 &1401728164
 GameObject:
   m_ObjectHideFlags: 0
