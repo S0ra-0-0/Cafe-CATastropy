@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7ac1a7d8253b5c4fb6fef28341a1291, type: 3}
-  m_Name: CheeseDough
+  m_Name: Broom
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
-  itemName: Cheese Dough
-  ingredient: 1
+  itemName: Broom
+  ingredient: 0
   icon: {fileID: 0}
-  itemPrefab: {fileID: 3015295584017948172, guid: 314d8eb769d9cfb4d815b95e34c8c52d, type: 3}
-  description: With this dough, you can make a cheese twister snack.
+  itemPrefab: {fileID: 0}
+  description: With this broom you can bully cats to make them flee!

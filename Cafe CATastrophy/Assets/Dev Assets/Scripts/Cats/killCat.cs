@@ -10,7 +10,7 @@ public class killCat : MonoBehaviour
             CatManager catManager = FindFirstObjectByType<CatManager>();
             if (catManager != null)
             {
-                catManager.currentNumberOfCats--;
+                catManager.CatDestroyed();
             }
         }
     }

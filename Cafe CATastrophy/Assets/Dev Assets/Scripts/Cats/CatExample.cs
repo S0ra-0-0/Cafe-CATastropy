@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class CatExample : CatTesting
@@ -5,7 +6,11 @@ public class CatExample : CatTesting
     public Transform conveyorPoint;
     public Transform fleePoint;
 
-    private float wanderTime = 0f;
+    private bool isPlayer1Side = false;
+    private bool isPlayer2Side = false;
+    private bool hasBroom = false;
+
+
 
     protected override Vector3 GetConveyorPoint()
     {
@@ -25,9 +30,34 @@ public class CatExample : CatTesting
 
     protected override bool ShouldFlee()
     {
-        // Flee after 10 seconds of wandering
-        wanderTime += Time.deltaTime;
+        InventoryManager inventory = FindAnyObjectByType<InventoryManager>();
 
-        return wanderTime > 15f;
+        if (inventory == null)
+        {
+            Debug.LogError("InventoryManager not found!");
+            return false;
+        }
+
+
+        if (droppedByThisPlayer == 1)
+        {
+            isPlayer1Side = inventory.transform.position.z < 0;
+        }
+        else
+        {
+            isPlayer2Side = inventory.transform.position.z > 0;
+        }
+
+        hasBroom = inventory.Items.Any(item => item.itemName == "Broom");
+
+        if (hasBroom)
+        {
+            Debug.Log("Player has a broom.");
+        }
+
+        return (isPlayer2Side || isPlayer1Side) && hasBroom;
+
     }
+
+
 }

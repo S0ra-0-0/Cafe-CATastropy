@@ -21,8 +21,6 @@ public abstract class CatTesting : MonoBehaviour
 
     protected UnityEngine.AI.NavMeshAgent agent;
 
-
-
     protected enum CatState
     {
         OnConveyor,

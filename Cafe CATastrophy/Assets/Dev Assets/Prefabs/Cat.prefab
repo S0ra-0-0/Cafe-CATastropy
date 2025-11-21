@@ -138,7 +138,7 @@ MonoBehaviour:
   turnSpeed: 5
   wanderRadius: 5
   wanderPauseTime: 2
-  jumpHeight: 1.5
+  jumpHeight: 3
   jumpDuration: 1
   droppedByThisPlayer: 0
   conveyorPoint: {fileID: 0}
@@ -152,7 +152,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2723490280315936478}
   m_Enabled: 0
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -161,7 +161,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 3.23
   m_BaseOffset: 0.1
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4

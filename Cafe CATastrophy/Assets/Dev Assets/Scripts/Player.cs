@@ -4,11 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerGD1 : MonoBehaviour
 {
     private Vector3 m_Movement;
-
     public PlayerInput PlayerInputObj;
-
     public Material[] Colors;
-
     private Rigidbody rb;
 
     private void Start()

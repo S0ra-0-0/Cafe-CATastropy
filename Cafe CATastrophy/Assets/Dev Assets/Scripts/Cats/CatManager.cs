@@ -1,33 +1,55 @@
 using UnityEngine;
+using System.Collections;
 
 public class CatManager : MonoBehaviour
 {
     [Header("Cat Spawning Settings")]
-
     [SerializeField] private Vector3 spawnLocation;
     [SerializeField] private GameObject[] catPrefab;
     [SerializeField] private int maxNumberOfCats = 3;
     [SerializeField] private float spawnInterval = 4f;
+    private bool playerFound = false;
 
-    public int currentNumberOfCats = 0;
-    private void Update()
+    private int currentNumberOfCats = 0;
+
+    private void Start()
     {
-        if (currentNumberOfCats < maxNumberOfCats)
+        StartCoroutine(FindPlayerCoroutine());
+        StartCoroutine(SpawnCatsCoroutine());
+    }
+
+    private IEnumerator FindPlayerCoroutine()
+    {
+        yield return new WaitUntil(() => FindAnyObjectByType<PlayerGD1>() != null);
+        playerFound = true;
+        Debug.Log("Player found!");
+    }
+
+    private IEnumerator SpawnCatsCoroutine()
+    {
+        while (true)
         {
-            spawnInterval -= Time.deltaTime;
-            if (spawnInterval <= 0f)
+            if (currentNumberOfCats < maxNumberOfCats && playerFound)
             {
                 SpawnCat();
-                spawnInterval = 5f; // Reset spawn interval
+                yield return new WaitForSeconds(spawnInterval);
+            }
+            else
+            {
+                yield return null;
             }
         }
-
-
     }
+
     private void SpawnCat()
     {
         int randomIndex = Random.Range(0, catPrefab.Length);
         Instantiate(catPrefab[randomIndex], spawnLocation, Quaternion.identity);
         currentNumberOfCats++;
+    }
+
+    public void CatDestroyed()
+    {
+        currentNumberOfCats--;
     }
 }

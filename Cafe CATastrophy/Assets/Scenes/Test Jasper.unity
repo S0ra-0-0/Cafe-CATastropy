@@ -1287,8 +1287,8 @@ Transform:
   m_GameObject: {fileID: 435145196}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: -0, z: -1.3874}
-  m_LocalScale: {x: 1, y: 1, z: 0.72255546}
+  m_LocalPosition: {x: 8.1964, y: -0, z: -1.3874}
+  m_LocalScale: {x: 0.74137884, y: 1, z: 0.72255546}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1756542582}
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGeometry: 1
+  m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: e48e0d9abba692d4dab965437c7c507a, type: 2}
-  m_BuildHeightMesh: 0
+  m_BuildHeightMesh: 1
 --- !u!64 &435145199
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1605,12 +1605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631ba5a178e2ebf48a81cca1e57a5817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  inventoryItem: {fileID: 11400000, guid: 5be6df61ec85a6341ad90c38d192e548, type: 2}
+  inventoryItem: {fileID: 11400000, guid: 7dd1323bc1b5e6c40892998b69578aae, type: 2}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &532472775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1902,7 +1900,7 @@ Transform:
   m_GameObject: {fileID: 573179942}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.72, y: 1, z: -6.05}
+  m_LocalPosition: {x: -1.72, y: 0, z: -6.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1995,7 +1993,7 @@ Transform:
   m_GameObject: {fileID: 613143744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.82, y: 1, z: 1.68}
+  m_LocalPosition: {x: -1.82, y: 0, z: 1.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2103,8 +2101,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &678240596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2890,8 +2886,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &794361702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2945,7 +2939,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.1042, y: 0, z: -5.6581}
-  m_LocalScale: {x: 0.8536, y: 1, z: 0.9473}
+  m_LocalScale: {x: 0.8536, y: 1, z: 1.2082813}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1756542582}
@@ -3314,8 +3308,8 @@ Transform:
   m_GameObject: {fileID: 846823284}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.3874}
-  m_LocalScale: {x: 1, y: 1, z: 0.72255546}
+  m_LocalPosition: {x: 0.7326, y: 0, z: -1.3874}
+  m_LocalScale: {x: 0.68307006, y: 1, z: 0.72255546}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1756542582}
@@ -3340,7 +3334,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGeometry: 1
+  m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
@@ -3351,7 +3345,7 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: f171c4381275da943be987ecc1f0e9fb, type: 2}
-  m_BuildHeightMesh: 0
+  m_BuildHeightMesh: 1
 --- !u!64 &846823287
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3689,7 +3683,7 @@ Transform:
   m_GameObject: {fileID: 943226970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.14, y: 2.4, z: 5.01}
+  m_LocalPosition: {x: 0.12, y: 2.4, z: 5.01}
   m_LocalScale: {x: 1.8426, y: 1.8426, z: 1.8426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3765,8 +3759,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &975723785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3868,8 +3860,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &1027820043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3937,7 +3927,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.5, z: 0.6}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -4067,7 +4057,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.5, z: 0.6}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -4276,8 +4266,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &1167752832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4616,8 +4604,8 @@ Transform:
   m_GameObject: {fileID: 1185677873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.14, y: 0.69, z: 2.14}
-  m_LocalScale: {x: 27.13044, y: 1.5657, z: 1.5657}
+  m_LocalPosition: {x: 3.14, y: 0.22, z: 2.14}
+  m_LocalScale: {x: 27.13044, y: 1.5657, z: 1.7870901}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 496918570}
@@ -5235,12 +5223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1055c4865d7b947b2b5e65db0130b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatManager
-  spawnLocation: {x: 3.14, y: 1.82, z: -10.07}
+  spawnLocation: {x: 3.4, y: 1.82, z: -10.07}
   catPrefab:
   - {fileID: 2723490280315936478, guid: dbb6b9a8f1aea454581f8716df59c06b, type: 3}
   maxNumberOfCats: 2
   spawnInterval: 4
-  currentNumberOfCats: 0
 --- !u!1 &1324735558
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,8 +5552,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &1424673819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5637,8 +5622,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &1444862536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5710,7 +5693,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.5, z: 0.6}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -5936,7 +5919,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.5, z: 0.6}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -6782,7 +6765,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.5, z: 0.6}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -6891,7 +6874,7 @@ Transform:
   m_GameObject: {fileID: 1641551384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.29, y: 2.4, z: 5.01}
+  m_LocalPosition: {x: 7.48, y: 2.4, z: 5.01}
   m_LocalScale: {x: 1.8426, y: 1.8426, z: 1.8426}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7446,7 +7429,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.5, z: 0.6}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -7567,6 +7550,8 @@ Transform:
   - {fileID: 846823285}
   - {fileID: 435145197}
   - {fileID: 153106252}
+  - {fileID: 1877118948}
+  - {fileID: 1767013430}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1762405894
@@ -7614,12 +7599,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631ba5a178e2ebf48a81cca1e57a5817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  inventoryItem: {fileID: 11400000, guid: 5be6df61ec85a6341ad90c38d192e548, type: 2}
+  inventoryItem: {fileID: 11400000, guid: 7dd1323bc1b5e6c40892998b69578aae, type: 2}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &1762405897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7690,8 +7673,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   inRange: 0
-  itemOnCounter: {fileID: 0}
-  counterPosition: []
 --- !u!65 &1765919901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7737,8 +7718,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767013429}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.194, y: 1.45, z: 4.751}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.59099966, y: 1.45, z: -5.334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7752,7 +7733,7 @@ Transform:
   - {fileID: 1174142941}
   - {fileID: 1080114595}
   - {fileID: 1098535316}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1756542582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792815203
 GameObject:
@@ -8809,8 +8790,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877118947}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83, y: 1.73, z: 7.33}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -3.1700003, y: 1.73, z: -2.9700007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8821,7 +8802,7 @@ Transform:
   - {fileID: 563485983}
   - {fileID: 1332787539}
   - {fileID: 1800251385}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1756542582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1877317991
 Mesh:
@@ -9602,6 +9583,4 @@ SceneRoots:
   - {fileID: 708706913}
   - {fileID: 475686890}
   - {fileID: 1185677880}
-  - {fileID: 1877118948}
   - {fileID: 1756542582}
-  - {fileID: 1767013430}
