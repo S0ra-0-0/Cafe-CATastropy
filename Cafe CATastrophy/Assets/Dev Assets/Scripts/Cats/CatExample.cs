@@ -6,10 +6,6 @@ public class CatExample : CatTesting
     public Transform conveyorPoint;
     public Transform fleePoint;
 
-    private bool isPlayer1Side = false;
-    private bool isPlayer2Side = false;
-    private bool hasBroom = false;
-
 
 
     protected override Vector3 GetConveyorPoint()
@@ -30,33 +26,19 @@ public class CatExample : CatTesting
 
     protected override bool ShouldFlee()
     {
-        InventoryManager inventory = FindAnyObjectByType<InventoryManager>();
+        return false;
+    }
 
-        if (inventory == null)
-        {
-            Debug.LogError("InventoryManager not found!");
-            return false;
-        }
+    protected override bool PerformAction()
+    {
+        return false;
+    }
+
+    protected override void ActionUpdate()
+    {
 
 
-        if (droppedByThisPlayer == 1)
-        {
-            isPlayer1Side = inventory.transform.position.z < 0;
-        }
-        else
-        {
-            isPlayer2Side = inventory.transform.position.z > 0;
-        }
-
-        hasBroom = inventory.Items.Any(item => item.itemName == "Broom");
-
-        if (hasBroom)
-        {
-            Debug.Log("Player has a broom.");
-        }
-
-        return (isPlayer2Side || isPlayer1Side) && hasBroom;
-
+        base.ActionUpdate();
     }
 
 

@@ -27,6 +27,7 @@ public abstract class CatTesting : MonoBehaviour
         JumpOff,
         Wander,
         Flee,
+        Action,
         JumpOn,
         Despawn
     }
@@ -87,6 +88,10 @@ public abstract class CatTesting : MonoBehaviour
                 FleeUpdate();
                 break;
 
+                case CatState.Action:
+             ActionUpdate();
+                break;
+
             case CatState.JumpOn:
                 JumpOnUpdate();
                 break;
@@ -107,6 +112,7 @@ public abstract class CatTesting : MonoBehaviour
             case CatState.JumpOff: OnEnterJumpOff(); break;
             case CatState.Wander: OnEnterWander(); break;
             case CatState.Flee: OnEnterFlee(); break;
+            case CatState.Action: OnEnterAction(); break;
             case CatState.JumpOn: OnEnterJumpOn(); break;
             case CatState.Despawn: OnEnterDespawn(); break;
         }
@@ -211,6 +217,11 @@ public abstract class CatTesting : MonoBehaviour
         {
             EnterState(CatState.Flee);
         }
+
+        if (PerformAction())
+        {
+            EnterState(CatState.Action);
+        }
     }
 
 
@@ -218,7 +229,6 @@ public abstract class CatTesting : MonoBehaviour
     {
         EnableRBMovement();
     }
-
 
     protected virtual void FleeUpdate()
     {
@@ -232,6 +242,15 @@ public abstract class CatTesting : MonoBehaviour
         }
     }
 
+    protected virtual void OnEnterAction()
+    {
+        EnableRBMovement();
+    }
+    protected virtual void ActionUpdate()
+    {
+        // Placeholder for action logic to be ovverridden by child classes to hit food or player etc.
+        EnterState(CatState.Wander);
+    }
     protected virtual void OnEnterJumpOn()
     {
         EnableRBMovement();
@@ -344,4 +363,6 @@ public abstract class CatTesting : MonoBehaviour
 
     // Child can decide when to flee
     protected abstract bool ShouldFlee();
+
+    protected abstract bool PerformAction();
 }
