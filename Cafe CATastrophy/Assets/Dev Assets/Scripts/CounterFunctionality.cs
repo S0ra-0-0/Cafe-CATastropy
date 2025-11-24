@@ -46,7 +46,7 @@ public class CounterFunctionality : MonoBehaviour
                     {
                         itemOnCounter = inventoryManager.Items[0];
                         Instantiate(itemOnCounter.itemPrefab, counterPosition[i]);
-                        inventoryManager.Items.RemoveAt(0);
+                        inventoryManager.ClearInventory();
                         cooldownTimer = 1;
                         break; //exit loop after placing item
                     }
