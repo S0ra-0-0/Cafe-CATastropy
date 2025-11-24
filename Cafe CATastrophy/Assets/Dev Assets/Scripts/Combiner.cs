@@ -49,11 +49,14 @@ public class Combiner : MonoBehaviour
             
         }
 
+        if (item1 != null)
+        {
+            machineTimer.StartTimer();
+        }
 
         //combiner for all ingredients
         if (item1.itemName == "Glass" && item2.itemName == "Tea Leaf")
         {
-            machineTimer.StartTimer();
             if (machineTimer.isFinished)
             {
                 //make tea
@@ -61,43 +64,23 @@ public class Combiner : MonoBehaviour
         }
         if (item1.itemName == "Glass" && item2.itemName == "Coffee Beans")
         {
-            machineTimer.StartTimer();
-            if (machineTimer.isFinished)
-            {
-                //make coffee
-            }
+            
         }
         if (item1.itemName == "Glass" && item2.itemName == "Matcha Powder")
         {
-            machineTimer.StartTimer();
-            if (machineTimer.isFinished)
-            {
-                //make matcha
-            }
+            
         }
         if (item1.itemName == "Dough" && item2.itemName == "Plate")
         {
-            machineTimer.StartTimer();
-            if (machineTimer.isFinished)
-            {
-                //make croissant
-            }
+            
         }
         if (item1.itemName == "Sweet Dough" && item2.itemName == "Plate")
         {
-            machineTimer.StartTimer();
-            if (machineTimer.isFinished)
-            {
-                //make donut
-            }
+            
         }
         if (item1.itemName == "Cheese Dough" && item2.itemName == "Plate")
         {
-            machineTimer.StartTimer();
-            if (machineTimer.isFinished)
-            {
-                //make cheese twist
-            }
+            
         }
     }
 }
