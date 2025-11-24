@@ -1,6 +1,7 @@
 using UnityEngine;
+using System.Collections;
 
-public abstract class CatTesting : MonoBehaviour
+public abstract class CatBase : MonoBehaviour
 {
 
     [Header("Movement Settings")]
@@ -16,6 +17,13 @@ public abstract class CatTesting : MonoBehaviour
     [Header("Jump Settings")]
     public float jumpHeight = 1f;
     public float jumpDuration = 0.5f;
+
+    [Header("Animation")]
+    public Animator animator;
+    protected int speedHash;
+
+    public Transform conveyorPoint;
+    public Transform fleePoint;
 
     public int droppedByThisPlayer;
 
@@ -65,6 +73,7 @@ public abstract class CatTesting : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         MovementTick();
+        CheckForBroom();
     }
 
 
@@ -88,8 +97,8 @@ public abstract class CatTesting : MonoBehaviour
                 FleeUpdate();
                 break;
 
-                case CatState.Action:
-             ActionUpdate();
+            case CatState.Action:
+                ActionUpdate();
                 break;
 
             case CatState.JumpOn:
@@ -149,8 +158,8 @@ public abstract class CatTesting : MonoBehaviour
     }
     protected virtual void OnConveyorUpdate()
     {
-       
-    
+
+
     }
 
     protected virtual void OnEnterJumpOff()
@@ -184,7 +193,7 @@ public abstract class CatTesting : MonoBehaviour
     protected virtual void OnEnterWander()
     {
         EnableAgentMovement();
-
+        animator.SetFloat("Speed", 1);
         PickNewWanderTarget();
         agent.speed = walkSpeed;
         agent.SetDestination(wanderTarget);
@@ -228,6 +237,8 @@ public abstract class CatTesting : MonoBehaviour
     protected virtual void OnEnterFlee()
     {
         EnableRBMovement();
+        animator.SetFloat("Speed", 2);
+
     }
 
     protected virtual void FleeUpdate()
@@ -236,7 +247,7 @@ public abstract class CatTesting : MonoBehaviour
 
         MoveTowards(target, runSpeed);
 
-        if (Vector3.Distance(transform.position, target) < 0.4f)
+        if (Vector3.Distance(transform.position, target) < 3f)
         {
             EnterState(CatState.JumpOn);
         }
@@ -248,12 +259,11 @@ public abstract class CatTesting : MonoBehaviour
     }
     protected virtual void ActionUpdate()
     {
-        // Placeholder for action logic to be ovverridden by child classes to hit food or player etc.
-        //EnterState(CatState.Wander);
     }
     protected virtual void OnEnterJumpOn()
     {
         EnableRBMovement();
+        animator.SetFloat("Speed", 0);
 
         jumpTimer = 0f;
         jumpStart = transform.position;
@@ -354,14 +364,63 @@ public abstract class CatTesting : MonoBehaviour
         rb.isKinematic = false;
     }
 
+    protected void CheckForBroom()
+    {
+        if (state == CatState.Wander)
+        {
+            PlayerGD1[] players = FindObjectsByType<PlayerGD1>(FindObjectsSortMode.None);
+            foreach (PlayerGD1 player in players)
+            {
+                InventoryManager inventory = player.gameObject.GetComponent<InventoryManager>();
+                if (inventory != null && inventory.Items.Count > 0)
+                {
+                    if (inventory.Items[0].itemName == "Broom")
+                    { 
+                        Vector3 broomPos = player.transform.position;
+                        float distance = Vector3.Distance(transform.position, broomPos);
+                        if (distance < 3f)
+                        {
+                            StartCoroutine(scareAnimation());
+                            EnterState(CatState.Flee);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-    // Child must tell where the conveyor is
-    protected abstract Vector3 GetConveyorPoint();
+    private IEnumerator scareAnimation()
+    {
+        animator.SetFloat("Speed",0);
+        animator.SetTrigger("Scare");
+        yield return new WaitForSeconds(.8f);
+    }
 
-    // Child must give flee target
-    protected abstract Vector3 GetFleeTarget();
 
-    // Child can decide when to flee
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 3f);
+    }
+
+
+
+    protected Vector3 GetConveyorPoint()
+    {
+        if (droppedByThisPlayer == 1) { conveyorPoint = GameObject.Find("ConveyorPoint1").transform; }
+        else if (droppedByThisPlayer == 2) { conveyorPoint = GameObject.Find("ConveyorPoint2").transform; }
+
+        return conveyorPoint.position;
+    }
+
+    protected Vector3 GetFleeTarget()
+    {
+        if (droppedByThisPlayer == 1) { fleePoint = GameObject.Find("FleePoint1").transform; }
+        else if (droppedByThisPlayer == 2) { fleePoint = GameObject.Find("FleePoint2").transform; }
+
+        return fleePoint.position;
+    }
     protected abstract bool ShouldFlee();
 
     protected abstract bool PerformAction();
