@@ -66,7 +66,7 @@ public class CatExample : CatTesting
                 }
 
                 targetObject = null;
-                state = CatState.Flee;
+                EnterState(CatState.Flee);
             }
         }
     }
