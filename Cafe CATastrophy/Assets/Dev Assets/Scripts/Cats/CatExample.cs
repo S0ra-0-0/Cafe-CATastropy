@@ -5,6 +5,8 @@ public class CatExample : CatTesting
 {
     public Transform conveyorPoint;
     public Transform fleePoint;
+    private Transform itemTarget;
+    private GameObject targetObject;
 
 
 
@@ -34,12 +36,41 @@ public class CatExample : CatTesting
         return false;
     }
 
+    public void SetTarget(Transform targetTransform, GameObject targetItem)
+    {
+        itemTarget = targetTransform;
+        targetObject = targetItem;
+        state = CatState.Action;
+
+    }
+
     protected override void ActionUpdate()
     {
+        if (state == CatState.Action)
+        {
+            agent.SetDestination(itemTarget.position);
+            float distance = Vector3.Distance(transform.position, itemTarget.position);
+            if (distance < 2f)
+            {
+                Debug.LogWarning("Destroying all child objects!");
 
+                foreach (Transform child in targetObject.transform)
+                {
+                    Destroy(child.gameObject);
+                }
 
-        base.ActionUpdate();
+                CounterFunctionality counter = targetObject.GetComponent<CounterFunctionality>();
+                if (counter != null)
+                {
+                    counter.itemOnCounter = null;
+                }
+
+                targetObject = null;
+                state = CatState.Flee;
+            }
+        }
     }
+
 
 
 }

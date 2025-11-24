@@ -1,5 +1,5 @@
-using NUnit.Framework;
-using Unity.VisualScripting;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class CounterFunctionality : MonoBehaviour
@@ -7,11 +7,10 @@ public class CounterFunctionality : MonoBehaviour
     public InventoryItems inventoryItem;
     public InventoryManager inventoryManager;
     public InteractAbility interactScript;
-
+    public float decayTimer = 5f;
     public bool inRange;
-    [SerializeField] InventoryItems itemOnCounter;
+    public InventoryItems itemOnCounter;
     public Transform[] counterPosition;
-
     private float cooldownTimer = 0;
 
     public void Update()
@@ -36,22 +35,26 @@ public class CounterFunctionality : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (itemOnCounter == null) //only do this is counter is empty
+            if (itemOnCounter == null) // Only do this if counter is empty
             {
                 for (int i = 0; i < counterPosition.Length; i++)
                 {
-                    //check if player is interacting and player has item to put down
                     if (cooldownTimer <= 0 && interactScript.isInteracting && inventoryManager.Items.Count > 0)
                     {
                         itemOnCounter = inventoryManager.Items[0];
-                        inventoryManager.Items[0] = null;
-                        Instantiate(itemOnCounter.itemPrefab, counterPosition[i]);
+                        Instantiate(
+                            itemOnCounter.itemPrefab,
+                            counterPosition[i].position,
+                            Quaternion.identity,
+                            this.transform
+                        );
+                        inventoryManager.ClearInventory();
+                        StartCoroutine(StartTimer());
                         cooldownTimer = 1.5f;
-                        break; //exit loop after placing item
+                        break;
                     }
                 }
             }
-
             if (cooldownTimer <= 0 && itemOnCounter != null && interactScript.isInteracting && inventoryManager.Items.Count == 0)
             {
                 inventoryManager.AddItem(itemOnCounter);
@@ -60,7 +63,22 @@ public class CounterFunctionality : MonoBehaviour
                 cooldownTimer = 1.5f;
             }
         }
+    }
 
+    private IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(decayTimer);
+        Debug.LogWarning("Timer over");
+        CatExample[] allCats = FindObjectsByType<CatExample>(FindObjectsSortMode.None);
+        foreach (CatExample cat in allCats)
+        {
+            if (cat.state == CatTesting.CatState.Wander)
+            {
+                cat.SetTarget(counterPosition[0], gameObject);
+                yield break;
+            }
+        }
+        Debug.LogWarning("No wandering cat found!");
     }
 
     public void OnTriggerExit(Collider other)
