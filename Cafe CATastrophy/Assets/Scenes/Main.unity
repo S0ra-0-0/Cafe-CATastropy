@@ -2304,6 +2304,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 0}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
+  decayTimer: 5
   inRange: 0
   itemOnCounter: {fileID: 0}
   counterPosition:
@@ -3106,6 +3107,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 0}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
+  decayTimer: 5
   inRange: 0
   itemOnCounter: {fileID: 0}
   counterPosition:
@@ -4042,6 +4044,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 0}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
+  decayTimer: 5
   inRange: 0
   itemOnCounter: {fileID: 0}
   counterPosition:
@@ -7023,6 +7026,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 0}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
+  decayTimer: 5
   inRange: 0
   itemOnCounter: {fileID: 0}
   counterPosition:
@@ -7119,6 +7123,7 @@ GameObject:
   - component: {fileID: 1775307189}
   - component: {fileID: 1775307188}
   - component: {fileID: 1775307187}
+  - component: {fileID: 1775307194}
   m_Layer: 0
   m_Name: ConveyerBelt
   m_TagString: ConveyorBelt
@@ -7264,9 +7269,31 @@ MonoBehaviour:
   inventoryItem: {fileID: 0}
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
+  decayTimer: 5
   inRange: 0
   itemOnCounter: {fileID: 0}
   counterPosition: []
+--- !u!65 &1775307194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775307186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 1, z: 1.4846466}
+  m_Center: {x: -2.3137631e-17, y: 0, z: -0.24232206}
 --- !u!43 &1784808448
 Mesh:
   m_ObjectHideFlags: 0
@@ -7955,7 +7982,7 @@ Transform:
   m_GameObject: {fileID: 1992379949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.359, y: 3.3861, z: 4.88}
+  m_LocalPosition: {x: 4.36, y: 3.3861, z: 5.45}
   m_LocalScale: {x: 17.753784, y: 7.552393, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
