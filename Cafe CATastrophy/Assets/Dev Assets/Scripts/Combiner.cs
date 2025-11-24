@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Combiner : MonoBehaviour
@@ -10,9 +13,12 @@ public class Combiner : MonoBehaviour
     public InventoryItems item1;
     public InventoryItems item2;
 
+    private ScriptableObject[] allItems;
+
     public void Start()
     {
-        //make a list or array with all scriptable objects that can be combined & final item
+        allItems = new ScriptableObject[15];
+        //is het wel nodig om alle items te laden hier?
 
     }
 
@@ -59,7 +65,10 @@ public class Combiner : MonoBehaviour
         {
             if (machineTimer.isFinished)
             {
-                //make tea
+                item1 = item2 = null;
+                //add item as pickup
+                //
+
             }
         }
         if (item1.itemName == "Glass" && item2.itemName == "Coffee Beans")
