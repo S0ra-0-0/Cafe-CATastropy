@@ -21,7 +21,7 @@ public abstract class CatTesting : MonoBehaviour
 
     protected UnityEngine.AI.NavMeshAgent agent;
 
-    protected enum CatState
+    public enum CatState
     {
         OnConveyor,
         JumpOff,
@@ -32,7 +32,7 @@ public abstract class CatTesting : MonoBehaviour
         Despawn
     }
 
-    protected CatState state = CatState.OnConveyor;
+    public CatState state = CatState.OnConveyor;
 
     protected Rigidbody rb;
     protected Vector3 velocity;
@@ -249,7 +249,7 @@ public abstract class CatTesting : MonoBehaviour
     protected virtual void ActionUpdate()
     {
         // Placeholder for action logic to be ovverridden by child classes to hit food or player etc.
-        EnterState(CatState.Wander);
+        //EnterState(CatState.Wander);
     }
     protected virtual void OnEnterJumpOn()
     {
