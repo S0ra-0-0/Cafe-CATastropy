@@ -5,11 +5,16 @@ public class Combiner : MonoBehaviour
     public InventoryItems inventoryItem;
     public InventoryManager inventoryManager;
     public InteractAbility interactScript;
-
-    public GameObject[] ingredients;
+    public MachineTimer machineTimer;
 
     public InventoryItems item1;
     public InventoryItems item2;
+
+    public void Start()
+    {
+        //make a list or array with all scriptable objects that can be combined & final item
+
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -22,25 +27,77 @@ public class Combiner : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (interactScript.isInteracting && inventoryManager.Items.Count > 0)
+        if (other.CompareTag("Player"))
         {
-            //fills item1 and item2 
-            if (item1 == null)
+            if (interactScript.isInteracting && inventoryManager.Items.Count > 0)
             {
-                item1 = inventoryManager.Items[0];
-                inventoryManager.RemoveItem(item1);
+                //fills item1 and item2 
+                if (item1 == null)
+                {
+                    item1 = inventoryManager.Items[0];
+                    inventoryManager.RemoveItem(inventoryManager.Items[0]);
+                    Debug.Log("First item placed");
+                    // vfx that first item has been placed?
+                }
+                else if (item2 == null)
+                {
+                    item2 = inventoryManager.Items[0];
+                    inventoryManager.RemoveItem(inventoryManager.Items[0]);
+                    Debug.Log("Second item placed");
+                }
             }
-            else if (item2 == null)
-            {
-                item2 = inventoryManager.Items[0];
-                inventoryManager.RemoveItem(item2);
-            }
+            
         }
 
 
         //combiner for all ingredients
-
+        if (item1.itemName == "Glass" && item2.itemName == "Tea Leaf")
+        {
+            machineTimer.StartTimer();
+            if (machineTimer.isFinished)
+            {
+                //make tea
+            }
+        }
+        if (item1.itemName == "Glass" && item2.itemName == "Coffee Beans")
+        {
+            machineTimer.StartTimer();
+            if (machineTimer.isFinished)
+            {
+                //make coffee
+            }
+        }
+        if (item1.itemName == "Glass" && item2.itemName == "Matcha Powder")
+        {
+            machineTimer.StartTimer();
+            if (machineTimer.isFinished)
+            {
+                //make matcha
+            }
+        }
+        if (item1.itemName == "Dough" && item2.itemName == "Plate")
+        {
+            machineTimer.StartTimer();
+            if (machineTimer.isFinished)
+            {
+                //make croissant
+            }
+        }
+        if (item1.itemName == "Sweet Dough" && item2.itemName == "Plate")
+        {
+            machineTimer.StartTimer();
+            if (machineTimer.isFinished)
+            {
+                //make donut
+            }
+        }
+        if (item1.itemName == "Cheese Dough" && item2.itemName == "Plate")
+        {
+            machineTimer.StartTimer();
+            if (machineTimer.isFinished)
+            {
+                //make cheese twist
+            }
+        }
     }
-
-    //2 ingredients tegelijk, if [0] + [1] == recipe then combine to new object
 }

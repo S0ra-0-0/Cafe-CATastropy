@@ -19,7 +19,6 @@ public class CounterFunctionality : MonoBehaviour
         if (cooldownTimer > 0)
         {
             cooldownTimer -= Time.deltaTime;
-            Debug.Log(cooldownTimer);
         }
     }
 
@@ -45,9 +44,9 @@ public class CounterFunctionality : MonoBehaviour
                     if (cooldownTimer <= 0 && interactScript.isInteracting && inventoryManager.Items.Count > 0)
                     {
                         itemOnCounter = inventoryManager.Items[0];
+                        inventoryManager.Items[0] = null;
                         Instantiate(itemOnCounter.itemPrefab, counterPosition[i]);
-                        inventoryManager.ClearInventory();
-                        cooldownTimer = 1;
+                        cooldownTimer = 1.5f;
                         break; //exit loop after placing item
                     }
                 }
@@ -56,8 +55,9 @@ public class CounterFunctionality : MonoBehaviour
             if (cooldownTimer <= 0 && itemOnCounter != null && interactScript.isInteracting && inventoryManager.Items.Count == 0)
             {
                 inventoryManager.AddItem(itemOnCounter);
+                Destroy(itemOnCounter.itemPrefab.gameObject);
                 itemOnCounter = null;
-                cooldownTimer = 1;
+                cooldownTimer = 1.5f;
             }
         }
 
