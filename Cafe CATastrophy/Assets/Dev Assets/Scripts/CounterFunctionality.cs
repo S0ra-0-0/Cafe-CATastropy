@@ -79,6 +79,7 @@ public class CounterFunctionality : MonoBehaviour
             }
         }
         Debug.LogWarning("No wandering cat found!");
+        decayTimer = 5f;
     }
 
     public void OnTriggerExit(Collider other)

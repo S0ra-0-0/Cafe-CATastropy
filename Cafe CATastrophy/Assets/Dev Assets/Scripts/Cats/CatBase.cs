@@ -238,15 +238,12 @@ public abstract class CatBase : MonoBehaviour
     {
         EnableRBMovement();
         animator.SetFloat("Speed", 2);
-
     }
 
     protected virtual void FleeUpdate()
     {
         Vector3 target = GetFleeTarget();
-
         MoveTowards(target, runSpeed);
-
         if (Vector3.Distance(transform.position, target) < 3f)
         {
             EnterState(CatState.JumpOn);

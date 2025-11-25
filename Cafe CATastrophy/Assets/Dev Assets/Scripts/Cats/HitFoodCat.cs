@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class HitFoodCat : CatBase
 {
@@ -29,7 +30,12 @@ public class HitFoodCat : CatBase
         {
             agent.SetDestination(itemTarget.position);
             float distance = Vector3.Distance(transform.position, itemTarget.position);
-            if (distance < 2f)
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                Quaternion.LookRotation(itemTarget.position - transform.position),
+                Time.deltaTime * 5f
+            );
+            if (distance < 3f)
             {
                 Debug.LogWarning("Destroying all child objects!");
 
@@ -45,9 +51,24 @@ public class HitFoodCat : CatBase
                 }
 
                 targetObject = null;
-                EnterState(CatState.Flee);
+                StartCoroutine(StealAnimation());
             }
         }
+    }
+
+
+    private IEnumerator StealAnimation()
+    {
+
+        agent.enabled = false;
+        rb.isKinematic = false;
+        rb.linearVelocity = Vector3.zero;
+
+        animator.SetTrigger("Steal");
+
+        yield return new WaitForSeconds(.8f);
+        EnterState(CatState.Flee);
+
     }
 
 
