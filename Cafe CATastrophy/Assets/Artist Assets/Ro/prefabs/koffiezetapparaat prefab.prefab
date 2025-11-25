@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7110167510483036606
+--- !u!1001 &4685040168454096752
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4ccd92083a7719d4aab54a4ad08b7440, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.051168
+      value: 12.794116
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ccd92083a7719d4aab54a4ad08b7440, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ccd92083a7719d4aab54a4ad08b7440, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.686021
+      value: 8.525768
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ccd92083a7719d4aab54a4ad08b7440, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,10 +48,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -402876720172047699, guid: 4ccd92083a7719d4aab54a4ad08b7440, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8677fb95c1fa1d042a374d61be177f02, type: 2}
     - target: {fileID: 919132149155446097, guid: 4ccd92083a7719d4aab54a4ad08b7440, type: 3}
       propertyPath: m_Name
       value: koffiezetapparaat
