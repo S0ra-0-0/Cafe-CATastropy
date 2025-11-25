@@ -121,13 +121,13 @@ PrefabInstance:
       addedObject: {fileID: 2659137892252338855}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d67a62c496430d478a3c265da23dba1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8193575455799820175}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d67a62c496430d478a3c265da23dba1, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7172040483171436421}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d67a62c496430d478a3c265da23dba1, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2236108922144052233}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d67a62c496430d478a3c265da23dba1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8796692589115424326}
     - targetCorrespondingSourceObject: {fileID: 1193893067083637880, guid: 5d67a62c496430d478a3c265da23dba1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4591286818788714581}
@@ -164,31 +164,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8193575455799820175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701803965623139555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7215b5d951454647811c7237fdfa411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CatExample
-  walkSpeed: 1.5
-  runSpeed: 4
-  acceleration: 6
-  turnSpeed: 5
-  wanderRadius: 5
-  wanderPauseTime: 2
-  jumpHeight: 3
-  jumpDuration: 2
-  animator: {fileID: 4591286818788714581}
-  conveyorPoint: {fileID: 0}
-  fleePoint: {fileID: 0}
-  droppedByThisPlayer: 0
-  state: 0
 --- !u!195 &7172040483171436421
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -232,6 +207,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0561326, y: 3.6661808, z: 4.958277}
   m_Center: {x: 0.16012263, y: 1.3330902, z: -0.29574227}
+--- !u!114 &8796692589115424326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4701803965623139555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14467327a2277fa4b8d355ea7c426684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitPlayerCat
+  walkSpeed: 1.5
+  runSpeed: 4
+  acceleration: 6
+  turnSpeed: 5
+  wanderRadius: 5
+  wanderPauseTime: 2
+  jumpHeight: 1
+  jumpDuration: 0.5
+  animator: {fileID: 4591286818788714581}
+  conveyorPoint: {fileID: 0}
+  fleePoint: {fileID: 0}
+  droppedByThisPlayer: 0
+  state: 0
+  hitTimer: 0
+  actionRadius: 3
+  moveSpeed: 2
 --- !u!1 &6706087929411937738 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1193893067083637880, guid: 5d67a62c496430d478a3c265da23dba1, type: 3}

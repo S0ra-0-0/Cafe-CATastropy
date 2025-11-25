@@ -946,9 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CatManager
   spawnLocation: {x: 3.6, y: 1.82, z: -10.34}
   catPrefab:
-  - {fileID: 3282006808515725661, guid: b9ff6cc803833b4439891473e4d7a7f9, type: 3}
   - {fileID: 4701803965623139555, guid: f55153f1c00a0cd40a09093ff80932c5, type: 3}
-  - {fileID: 5090938056311149088, guid: 0371e26d608f570419650ad0accdf7f9, type: 3}
   maxNumberOfCats: 2
   spawnInterval: 4
 --- !u!1 &549616476

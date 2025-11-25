@@ -252,7 +252,7 @@ public abstract class CatBase : MonoBehaviour
 
     protected virtual void OnEnterAction()
     {
-        EnableRBMovement();
+        //EnableRBMovement();
     }
     protected virtual void ActionUpdate()
     {
