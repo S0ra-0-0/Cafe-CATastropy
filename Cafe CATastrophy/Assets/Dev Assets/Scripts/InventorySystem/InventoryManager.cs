@@ -21,21 +21,20 @@ public class InventoryManager : MonoBehaviour
 
     public void Update()
     {
-        /*
+        
         if (Items.Count > 1)
         {
             //limit inventory size to 1
             Items.RemoveAt(1);
         }
 
-        //change based on which player is active ???
-        if (Items[0] != null)
-        {
-            P1Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
-            P2Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
-        }
-        */
-        //ff uitgezet want was errors aan het spammen in console
+        ////change based on which player is active ???
+        //if (Items[0] != null)
+        //{
+        //    P1Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
+        //    P2Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
+        //}
+        
     }
 
     public void ClearInventory()
