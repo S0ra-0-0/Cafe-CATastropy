@@ -54,8 +54,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ef83a6d76e539ae44910957a7603998d, type: 2}
     - target: {fileID: 919132149155446097, guid: 6c21e5876d8fd234bbf00cc3c0132740, type: 3}
       propertyPath: m_Name
-      value: waterkoker
+      value: waterkoker prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5204074124129430295, guid: 6c21e5876d8fd234bbf00cc3c0132740, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ef83a6d76e539ae44910957a7603998d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
