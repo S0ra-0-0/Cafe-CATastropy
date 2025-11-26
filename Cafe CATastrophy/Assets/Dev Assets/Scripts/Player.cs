@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerGD1 : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerGD1 : MonoBehaviour
     public PlayerInput PlayerInputObj;
     public Material[] Colors;
     private Rigidbody rb;
+    private bool isStunned = false;
 
     private void Start()
     {
@@ -22,6 +24,24 @@ public class PlayerGD1 : MonoBehaviour
 
     void Update()
     {
-        rb.linearVelocity = new Vector3(m_Movement.x * 10, rb.linearVelocity.y, m_Movement.z * 10);
+        if (!isStunned)
+        {
+            rb.linearVelocity = new Vector3(m_Movement.x * 10, rb.linearVelocity.y, m_Movement.z * 10);
+        }
+    }
+
+    public void StunPlayer(float stunDuration)
+    {
+        if (!isStunned)
+        {
+            StartCoroutine(StunCoroutine(stunDuration));
+        }
+    }   
+
+    private IEnumerator StunCoroutine(float duration)
+    {
+        isStunned = true;
+        yield return new WaitForSeconds(duration);
+        isStunned = false;
     }
 }

@@ -69,16 +69,17 @@ public class CounterFunctionality : MonoBehaviour
     {
         yield return new WaitForSeconds(decayTimer);
         Debug.LogWarning("Timer over");
-        CatExample[] allCats = FindObjectsByType<CatExample>(FindObjectsSortMode.None);
-        foreach (CatExample cat in allCats)
+        HitFoodCat[] allCats = FindObjectsByType<HitFoodCat>(FindObjectsSortMode.None);
+        foreach (HitFoodCat cat in allCats)
         {
-            if (cat.state == CatTesting.CatState.Wander)
+            if (cat.state == CatBase.CatState.Wander)
             {
                 cat.SetTarget(counterPosition[0], gameObject);
                 yield break;
             }
         }
         Debug.LogWarning("No wandering cat found!");
+        decayTimer = 5f;
     }
 
     public void OnTriggerExit(Collider other)

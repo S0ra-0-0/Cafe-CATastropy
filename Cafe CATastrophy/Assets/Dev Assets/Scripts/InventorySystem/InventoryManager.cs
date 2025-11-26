@@ -21,6 +21,7 @@ public class InventoryManager : MonoBehaviour
 
     public void Update()
     {
+        /*
         if (Items.Count > 1)
         {
             //limit inventory size to 1
@@ -33,7 +34,8 @@ public class InventoryManager : MonoBehaviour
             P1Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
             P2Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
         }
-
+        */
+        //ff uitgezet want was errors aan het spammen in console
     }
 
     public void ClearInventory()

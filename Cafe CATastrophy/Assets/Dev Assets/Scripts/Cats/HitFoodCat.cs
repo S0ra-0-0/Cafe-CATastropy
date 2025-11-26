@@ -1,30 +1,10 @@
-using System.Linq;
 using UnityEngine;
+using System.Collections;
 
-public class CatExample : CatTesting
+public class HitFoodCat : CatBase
 {
-    public Transform conveyorPoint;
-    public Transform fleePoint;
     private Transform itemTarget;
     private GameObject targetObject;
-
-
-
-    protected override Vector3 GetConveyorPoint()
-    {
-        if (droppedByThisPlayer == 1) { conveyorPoint = GameObject.Find("ConveyorPoint1").transform; }
-        else if (droppedByThisPlayer == 2) { conveyorPoint = GameObject.Find("ConveyorPoint2").transform; }
-
-        return conveyorPoint.position;
-    }
-
-    protected override Vector3 GetFleeTarget()
-    {
-        if (droppedByThisPlayer == 1) { fleePoint = GameObject.Find("FleePoint1").transform; }
-        else if (droppedByThisPlayer == 2) { fleePoint = GameObject.Find("FleePoint2").transform; }
-
-        return fleePoint.position;
-    }
 
     protected override bool ShouldFlee()
     {
@@ -50,7 +30,12 @@ public class CatExample : CatTesting
         {
             agent.SetDestination(itemTarget.position);
             float distance = Vector3.Distance(transform.position, itemTarget.position);
-            if (distance < 2f)
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                Quaternion.LookRotation(itemTarget.position - transform.position),
+                Time.deltaTime * 5f
+            );
+            if (distance < 3f)
             {
                 Debug.LogWarning("Destroying all child objects!");
 
@@ -66,9 +51,24 @@ public class CatExample : CatTesting
                 }
 
                 targetObject = null;
-                EnterState(CatState.Flee);
+                StartCoroutine(StealAnimation());
             }
         }
+    }
+
+
+    private IEnumerator StealAnimation()
+    {
+
+        agent.enabled = false;
+        rb.isKinematic = false;
+        rb.linearVelocity = Vector3.zero;
+
+        animator.SetTrigger("Steal");
+
+        yield return new WaitForSeconds(.8f);
+        EnterState(CatState.Flee);
+
     }
 
 
