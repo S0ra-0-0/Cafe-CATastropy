@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Tea Leaf
   ingredient: 1
   icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 919132149155446097, guid: 3279a1be9f7632f46a173ceeeded3e9e, type: 3}
   description: A tea leaf. If you add it to hot water, it makes tea.

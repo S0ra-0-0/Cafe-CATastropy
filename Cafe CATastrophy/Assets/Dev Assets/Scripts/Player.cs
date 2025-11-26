@@ -1,6 +1,7 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 
 public class PlayerGD1 : MonoBehaviour
 {
@@ -9,24 +10,78 @@ public class PlayerGD1 : MonoBehaviour
     public Material[] Colors;
     private Rigidbody rb;
     private bool isStunned = false;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float walkThreshold = 0.1f; // Minimum input magnitude to trigger walking
+    [SerializeField] private InventoryManager inventory;
+    [SerializeField] private Transform itemHoldPosistion;
+    private GameObject heldItem; 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        GetComponent<MeshRenderer>().material = Colors[PlayerInputObj.playerIndex];
+
+        if (PlayerInputObj.playerIndex < Colors.Length)
+        {
+            GetComponentInChildren<MeshRenderer>().material = Colors[PlayerInputObj.playerIndex];
+        }
+        else
+        {
+            Debug.LogError("Player index out of range for Colors array!");
+        }
     }
 
-    public void Move(InputAction.CallbackContext context)
-    {
-        m_Movement.z = context.ReadValue<Vector2>().x * -1;
-        m_Movement.x = context.ReadValue<Vector2>().y;
-    }
 
     void Update()
     {
         if (!isStunned)
         {
+            Vector2 input = PlayerInputObj.actions["Move"].ReadValue<Vector2>();
+            m_Movement.z = input.x * -1;
+            m_Movement.x = input.y;
+
             rb.linearVelocity = new Vector3(m_Movement.x * 10, rb.linearVelocity.y, m_Movement.z * 10);
+
+            bool isWalking = input.magnitude > walkThreshold;
+            animator.SetBool("IsWalking", isWalking);
+            animator.SetBool("IsStunned", false);
+
+            if (isWalking)
+            {
+                float angle = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, angle-90, 0);
+            }
+
+
+        }
+        else
+        {
+            animator.SetBool("IsStunned", true);
+            animator.SetBool("IsWalking", false);
+        }
+
+        if (inventory.Items != null && inventory.Items.Count > 0)
+        {
+            if (inventory.Items[0].itemPrefab != null && heldItem == null)
+            {
+                animator.SetBool("IsHoldingItem", true);
+                Debug.Log("Spawning held item");
+                heldItem = Instantiate(inventory.Items[0].itemPrefab, itemHoldPosistion, transform);
+            }
+            else if (inventory.Items[0].itemPrefab == null && heldItem != null)
+            {
+                Destroy(heldItem);
+                heldItem = null;
+                animator.SetBool("IsHoldingItem", false);
+            }
+        }
+        else
+        {
+            if (heldItem != null)
+            {
+                Destroy(heldItem);
+                heldItem = null;
+            }
+            animator.SetBool("IsHoldingItem", false);
         }
     }
 
@@ -36,7 +91,7 @@ public class PlayerGD1 : MonoBehaviour
         {
             StartCoroutine(StunCoroutine(stunDuration));
         }
-    }   
+    }
 
     private IEnumerator StunCoroutine(float duration)
     {
