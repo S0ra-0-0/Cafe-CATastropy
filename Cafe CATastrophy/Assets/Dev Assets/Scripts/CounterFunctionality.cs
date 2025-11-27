@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class CounterFunctionality : MonoBehaviour
@@ -43,11 +42,12 @@ public class CounterFunctionality : MonoBehaviour
                     {
                         itemOnCounter = inventoryManager.Items[0];
                         Instantiate(
-                            itemOnCounter.itemPrefab,
-                            counterPosition[i].position,
-                            Quaternion.identity,
-                            this.transform
-                        );
+                         itemOnCounter.itemPrefab,
+                         counterPosition[i].position + new Vector3(0, 0.58f, 0), 
+                         itemOnCounter.itemPrefab.transform.rotation,
+                        this.transform
+                         );
+
                         inventoryManager.ClearInventory();
                         StartCoroutine(StartTimer());
                         cooldownTimer = 1.5f;

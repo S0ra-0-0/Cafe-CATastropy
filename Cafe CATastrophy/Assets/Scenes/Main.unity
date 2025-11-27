@@ -289,7 +289,7 @@ Transform:
   m_GameObject: {fileID: 156303705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.47, y: 0, z: 0.5873201}
+  m_LocalPosition: {x: -0.47, y: 0, z: -6.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2233,6 +2233,7 @@ GameObject:
   - component: {fileID: 889296535}
   - component: {fileID: 889296534}
   - component: {fileID: 889296537}
+  - component: {fileID: 889296538}
   m_Layer: 3
   m_Name: Broom 2
   m_TagString: Untagged
@@ -2271,7 +2272,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2349,12 +2350,28 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999976, y: 1, z: 2.356262}
-  m_Center: {x: -0.000000113531534, y: 0, z: -0.6781261}
+  m_Size: {x: 0.99999976, y: 1, z: 3.5051947}
+  m_Center: {x: -0.00000011319024, y: 0, z: -1.2525885}
+--- !u!114 &889296538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889296531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631ba5a178e2ebf48a81cca1e57a5817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemController
+  inventoryItem: {fileID: 11400000, guid: 7dd1323bc1b5e6c40892998b69578aae, type: 2}
+  inventoryManager: {fileID: 0}
+  interactScript: {fileID: 0}
+  inRange: 0
 --- !u!1 &894221388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,14 +2730,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.9947485
-  m_Height: 2
+  m_Radius: 1.1637926
+  m_Height: 2.7504697
   m_Direction: 1
-  m_Center: {x: -0.33683908, y: 0, z: 0.15790904}
+  m_Center: {x: -0.15969133, y: 0, z: 0.5041009}
 --- !u!23 &900231708
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2792,7 +2809,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2951,10 +2968,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.98413867
-  m_Height: 2.2215743
+  m_Radius: 1.1760149
+  m_Height: 2.3520298
   m_Direction: 1
-  m_Center: {x: -0.48413843, y: 0.11078715, z: -0.00000011920929}
+  m_Center: {x: -0.4841385, y: 0.11078715, z: -0.19187641}
 --- !u!114 &916851944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5710,6 +5727,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterkoker prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1045156975974450491, guid: d3a2a824296c8154198d18b525a8653d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045156975974450491, guid: d3a2a824296c8154198d18b525a8653d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0046
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6169,7 +6194,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Matcha Powder
   ingredient: 1
   icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 6528692427007794921, guid: a5f52738507d94649a39b84227b1ce04, type: 3}
   description: Matcha powder. If you add this to hot water and whisk it, it makes
     matcha.

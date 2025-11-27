@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Coffee
   ingredient: 0
   icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 850301810586155536, guid: de2db82d18e80224e9260dfaf8266de5, type: 3}
   description: A delicious warm cup of coffee. Freshly prepared!
