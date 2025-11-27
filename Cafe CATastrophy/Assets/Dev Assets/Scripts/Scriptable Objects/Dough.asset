@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Dough
   ingredient: 1
   icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 6138917909377757192, guid: 1c92d12533eeea040bda0b7dde3c6226, type: 3}
   description: A ball of unflavoured dough. If you knead it, you can make a croissant.

@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Sweet Dough
   ingredient: 1
   icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 3873287618639214022, guid: 2b662e2316fc78c42b04c96731d0e65a, type: 3}
   description: With this dough, you can make a dough-nut!
