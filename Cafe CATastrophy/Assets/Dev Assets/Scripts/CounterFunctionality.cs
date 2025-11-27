@@ -45,7 +45,7 @@ public class CounterFunctionality : MonoBehaviour
                          itemOnCounter.itemPrefab,
                          counterPosition[i].position + new Vector3(0, 0.58f, 0), 
                          itemOnCounter.itemPrefab.transform.rotation,
-                        this.transform
+                        transform
                          );
 
                         inventoryManager.ClearInventory();
@@ -58,7 +58,11 @@ public class CounterFunctionality : MonoBehaviour
             if (cooldownTimer <= 0 && itemOnCounter != null && interactScript.isInteracting && inventoryManager.Items.Count == 0)
             {
                 inventoryManager.AddItem(itemOnCounter);
-                Destroy(itemOnCounter.itemPrefab.gameObject);
+
+                foreach (Transform child in transform)
+                {
+                    Destroy(child.gameObject);
+                }
                 itemOnCounter = null;
                 cooldownTimer = 1.5f;
             }
