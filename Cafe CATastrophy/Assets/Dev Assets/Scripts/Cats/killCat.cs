@@ -4,14 +4,19 @@ public class KillCat : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Cat"))
+        if (other.gameObject)
         {
             Destroy(other.gameObject);
-            CatManager catManager = FindFirstObjectByType<CatManager>();
-            if (catManager != null)
+
+            if (other.CompareTag("Cat"))
             {
-                catManager.CatDestroyed();
+                CatManager catManager = FindFirstObjectByType<CatManager>();
+                if (catManager != null)
+                {
+                    catManager.CatDestroyed();
+                }
             }
         }
     }
 }
+

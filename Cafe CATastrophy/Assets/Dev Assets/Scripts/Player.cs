@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,7 +13,7 @@ public class PlayerGD1 : MonoBehaviour
     [SerializeField] private float walkThreshold = 0.1f; // Minimum input magnitude to trigger walking
     [SerializeField] private InventoryManager inventory;
     [SerializeField] private Transform itemHoldPosistion;
-    private GameObject heldItem; 
+    private GameObject heldItem;
 
     private void Start()
     {
@@ -48,7 +47,7 @@ public class PlayerGD1 : MonoBehaviour
             if (isWalking)
             {
                 float angle = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(0, angle-90, 0);
+                transform.rotation = Quaternion.Euler(0, angle - 90, 0);
             }
 
 
@@ -65,7 +64,12 @@ public class PlayerGD1 : MonoBehaviour
             {
                 animator.SetBool("IsHoldingItem", true);
                 Debug.Log("Spawning held item");
-                heldItem = Instantiate(inventory.Items[0].itemPrefab, itemHoldPosistion, transform);
+                heldItem = Instantiate(
+                 inventory.Items[0].itemPrefab,
+                 itemHoldPosistion.position, 
+                 inventory.Items[0].itemPrefab.transform.rotation,  
+                 itemHoldPosistion          
+                  );
             }
             else if (inventory.Items[0].itemPrefab == null && heldItem != null)
             {

@@ -8,6 +8,8 @@ TagManager:
   - ConveyorBelt
   - ConveyorPoint
   - FleePoint
+  - Cat
+  - OrderItem
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class TrashCan : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (interactScript.isInteracting) //object can give an item (machine) so pick it up
+        if (other.CompareTag("Player") && interactScript.isInteracting) //object can give an item (machine) so pick it up
         {
             inventoryManager.ClearInventory();
         }
