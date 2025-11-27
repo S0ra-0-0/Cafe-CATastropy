@@ -6592,6 +6592,9 @@ MonoBehaviour:
   SpawnPoints:
   - {fileID: 156303706}
   - {fileID: 1280444835}
+  PlayerPrefabs:
+  - {fileID: 6455478481285043993, guid: 60f9c1a061e9c02448aa295bc4857509, type: 3}
+  - {fileID: 6595453624299601905, guid: 007631c67a0885444abb2ec8b990da5f, type: 3}
 --- !u!114 &1366871590
 MonoBehaviour:
   m_ObjectHideFlags: 0
