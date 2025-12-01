@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Dough
   ingredient: 1
-  icon: {fileID: 0}
+  icon: {fileID: -1969918098, guid: 6fe9aca9efd6051439a33e457a6f9191, type: 3}
   itemPrefab: {fileID: 6138917909377757192, guid: 1c92d12533eeea040bda0b7dde3c6226, type: 3}
   description: A ball of unflavoured dough. If you knead it, you can make a croissant.

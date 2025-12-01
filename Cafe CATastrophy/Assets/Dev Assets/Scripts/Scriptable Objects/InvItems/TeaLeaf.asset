@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Tea Leaf
   ingredient: 1
-  icon: {fileID: 0}
+  icon: {fileID: -1186979707, guid: bfa692fdf59fde74d998f43fe8010a97, type: 3}
   itemPrefab: {fileID: 20040324556589688, guid: 9b9a852f613409c4796bccfa34beabcc, type: 3}
   description: A tea leaf. If you add it to hot water, it makes tea.
