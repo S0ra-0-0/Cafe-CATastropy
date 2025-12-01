@@ -6,7 +6,15 @@ public class OrderRegister : MonoBehaviour
     {
         if (other.CompareTag("OrderItem"))
         {
-           OrderManager.Instance.RegisterItem(other.GetComponent<InventoryItems>());
+            var itemInstance = other.GetComponent<ItemInstance>();
+            if (itemInstance != null && itemInstance.itemData != null)
+            {
+                OrderManager.Instance.RegisterItem(itemInstance.itemData);
+            }
+            else
+            {
+                Debug.LogWarning("OrderRegister: collided object has no ItemInstance or itemData.", other.gameObject);
+            }
 
             Destroy(other.gameObject);
         }

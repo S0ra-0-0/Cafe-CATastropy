@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Broom
   ingredient: 0
-  icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  icon: {fileID: 1397381296, guid: 83ddb7c13391d3244b2593c66d66b1a8, type: 3}
+  itemPrefab: {fileID: 654367663141605564, guid: 198c149ef22004c4e930d0d03886e2a0, type: 3}
   description: With this broom you can bully cats to make them flee!

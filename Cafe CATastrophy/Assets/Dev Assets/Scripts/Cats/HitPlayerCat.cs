@@ -7,6 +7,7 @@ public class HitPlayerCat : CatBase
     [SerializeField] private float actionRadius = 3f; // Distance to trigger hit
     [SerializeField] private float moveSpeed = 5f; // Speed when moving toward player
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private float failSafeTimer = 10f;
     private Coroutine actionCoroutine;
 
     protected override bool ShouldFlee()
@@ -44,13 +45,21 @@ public class HitPlayerCat : CatBase
           );
 
             float distance = Vector3.Distance(transform.position, playerTransform.position);
-            if (distance < actionRadius)
+            StartCoroutine(failTimer());
+            if (distance < actionRadius && failSafeTimer > 0)
             {
                 if (actionCoroutine != null)
                     StopCoroutine(actionCoroutine);
                 StartCoroutine(HitPlayer());
             }
         }
+    }
+
+    private IEnumerator failTimer()
+    {
+        yield return new WaitForSeconds(failSafeTimer);
+        EnterState(CatState.Flee);
+        failSafeTimer = 10f;
     }
 
     private IEnumerator HitPlayer()

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 
 public class ItemController : MonoBehaviour
@@ -16,7 +15,7 @@ public class ItemController : MonoBehaviour
         if (cooldownTimer > 0)
         {
             cooldownTimer -= Time.deltaTime;
-            Debug.Log(cooldownTimer);
+            //Debug.Log(cooldownTimer);
         }
     }
 

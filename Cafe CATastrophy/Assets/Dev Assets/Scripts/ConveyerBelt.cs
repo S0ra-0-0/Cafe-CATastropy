@@ -12,7 +12,7 @@ public class ConveyerBelt : MonoBehaviour
     public bool inRange;
     public InventoryItems itemOnCounter;
     public Transform[] counterPosition;
-    private float cooldownTimer = 0;
+
 
     private void OnCollisionStay(Collision collision)
     {
@@ -33,6 +33,35 @@ public class ConveyerBelt : MonoBehaviour
         }
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            for (int i = 0; i < counterPosition.Length; i++)
+            {
+                if (interactScript.isInteracting && inventoryManager.Items.Count > 0)
+                {
+                    itemOnCounter = inventoryManager.Items[0];
+                    GameObject order = Instantiate(
+                     itemOnCounter.itemPrefab,
+                     counterPosition[i].position + new Vector3(0, 0.58f, 0),
+                     itemOnCounter.itemPrefab.transform.rotation
+                     );
+                    order.gameObject.tag = "OrderItem";
+                    order.layer = LayerMask.NameToLayer("OrderItem");
+                    order.AddComponent<Rigidbody>();
+                    order.AddComponent<BoxCollider>();
+                    var instance = order.AddComponent<ItemInstance>();
+                    instance.Initialize(itemOnCounter);
+
+
+                    inventoryManager.ClearInventory();
+                    itemOnCounter = null;
+                    break;
+                }
+            }
+        }
+    }
     public void OnTriggerExit(Collider other)
     {
         inRange = false;

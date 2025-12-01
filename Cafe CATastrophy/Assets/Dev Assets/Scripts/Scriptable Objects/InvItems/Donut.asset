@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Donut
   ingredient: 0
-  icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  icon: {fileID: -368282365, guid: aac5955ffb1c7d249a6c83f439c5d44d, type: 3}
+  itemPrefab: {fileID: 9122181176551420090, guid: fd8467a628d75bf44b791a1088ac48db, type: 3}
   description: A delicious donut with glazing on it.

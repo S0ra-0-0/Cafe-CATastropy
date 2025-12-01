@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Croissant
   ingredient: 0
-  icon: {fileID: 0}
+  icon: {fileID: -2141564884, guid: 73a61da1dd5321b45bd101d34c3617fd, type: 3}
   itemPrefab: {fileID: 919132149155446097, guid: 649c4156602229c478be48b7afb50448, type: 3}
   description: A soft croissant, straight out of the oven.
