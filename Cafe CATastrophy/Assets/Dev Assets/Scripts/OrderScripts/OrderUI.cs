@@ -82,7 +82,6 @@ public class OrderUI : MonoBehaviour
             Image fill = orderFillImages[i];
             if (fill == null) continue;
 
-            // ensure fill image is configured for fill (you can also set this in the inspector)
             if (fill.type != Image.Type.Filled) fill.type = Image.Type.Filled;
 
             float fillAmount = 0f;

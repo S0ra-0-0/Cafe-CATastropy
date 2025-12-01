@@ -58,8 +58,11 @@ public class HitPlayerCat : CatBase
     private IEnumerator failTimer()
     {
         yield return new WaitForSeconds(failSafeTimer);
-        EnterState(CatState.Flee);
-        failSafeTimer = 10f;
+        if (state == CatState.Action)
+        {
+            EnterState(CatState.Flee);
+            failSafeTimer = 10f;
+        }
     }
 
     private IEnumerator HitPlayer()

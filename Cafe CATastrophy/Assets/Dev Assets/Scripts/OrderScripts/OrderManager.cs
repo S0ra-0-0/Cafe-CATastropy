@@ -7,17 +7,20 @@ public class OrderManager : MonoBehaviour
     public Order[] availableOrders;
     [SerializeField] private OrderGenerator orderGenerator;
     [SerializeField] private OrderUI orderUI;
+    [SerializeField] private GameManager gameManager;
 
     [Header("Order timing")]
-    [Tooltip("Default time (seconds) for each order before it expires.")]
-    [SerializeField] private float defaultOrderDuration = 30f;
+    [Tooltip("Minimum time (seconds) for each order before it expires.")]
+    [SerializeField] private float minOrderDuration = 15f;
+    [Tooltip("Maximum time (seconds) for each order before it expires.")]
+    [SerializeField] private float maxOrderDuration = 30f;
 
     private class ActiveOrder
     {
         public Order order;
         public bool[] delivered;
 
-        // timing
+        // Timing
         public float duration;
         public float timeRemaining;
 
@@ -82,7 +85,7 @@ public class OrderManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void StartOrders()
     {
         GenerateInitialOrders();
     }
@@ -104,11 +107,10 @@ public class OrderManager : MonoBehaviour
                 Debug.Log($"Order {a.order.orderId} expired.");
                 ReplaceOrderAt(i);
                 anyExpired = true;
-                // ReplaceOrderAt will also update UI; activeOrders has been reset for this index.
+                gameManager.RemoveTime(10);
             }
         }
 
-        // Update UI each frame so fill images animate smoothly; cheap with only a couple orders.
         if (!anyExpired) UpdateOrderUI();
     }
 
@@ -127,7 +129,8 @@ public class OrderManager : MonoBehaviour
         {
             Order newOrder = orderGenerator.GenerateRandomOrder();
             availableOrders[i] = newOrder;
-            activeOrders[i] = new ActiveOrder(newOrder, defaultOrderDuration);
+            int randomOrderDuration = Random.Range(3, 15);
+            activeOrders[i] = new ActiveOrder(newOrder, randomOrderDuration);
         }
 
         UpdateOrderUI();
@@ -157,7 +160,7 @@ public class OrderManager : MonoBehaviour
                 if (active.IsComplete())
                 {
                     Debug.Log($"Order {active.order.orderId} completed!");
-                    // TODO: award player, update score/UI, play VFX/sound, etc.
+                    gameManager.AddTime(40);
                     ReplaceOrderAt(i);
                 }
                 return;
@@ -177,7 +180,8 @@ public class OrderManager : MonoBehaviour
 
         Order newOrder = orderGenerator.GenerateRandomOrder();
         availableOrders[index] = newOrder;
-        activeOrders[index] = new ActiveOrder(newOrder, defaultOrderDuration);
+        int randomOrderDuration = Random.Range(24, 61);
+        activeOrders[index] = new ActiveOrder(newOrder, randomOrderDuration);
 
         Debug.Log($"Replaced order at slot {index} with new order {newOrder.orderId}");
 
