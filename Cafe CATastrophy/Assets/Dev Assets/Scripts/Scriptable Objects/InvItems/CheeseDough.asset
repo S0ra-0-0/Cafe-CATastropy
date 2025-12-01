@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Cheese Dough
   ingredient: 1
-  icon: {fileID: 0}
+  icon: {fileID: 1024382029, guid: ebe8c30fd82d9e44c9ea89d0e699a7ee, type: 3}
   itemPrefab: {fileID: 8910303543543041372, guid: 9d5da307cd86bf241a8003b1783ed663, type: 3}
   description: With this dough, you can make a cheese twister snack.

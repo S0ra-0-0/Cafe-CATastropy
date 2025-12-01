@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Plate
   ingredient: 1
-  icon: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  icon: {fileID: 438621840, guid: a1fe8c92fe73ff84cad8833312e09f67, type: 3}
+  itemPrefab: {fileID: 4846969501329457290, guid: 60a4a79802e877b498d51a62b16eef07, type: 3}
   description: An empty plate.

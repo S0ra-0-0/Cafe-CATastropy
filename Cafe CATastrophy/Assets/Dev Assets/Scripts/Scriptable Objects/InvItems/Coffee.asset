@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Coffee
   ingredient: 0
-  icon: {fileID: 0}
-  itemPrefab: {fileID: 850301810586155536, guid: de2db82d18e80224e9260dfaf8266de5, type: 3}
+  icon: {fileID: 58917091, guid: 708614771714ec841880ea1998c482a2, type: 3}
+  itemPrefab: {fileID: 6849595979474559938, guid: c7f7946664bc1844abbefb933e01ce6d, type: 3}
   description: A delicious warm cup of coffee. Freshly prepared!
