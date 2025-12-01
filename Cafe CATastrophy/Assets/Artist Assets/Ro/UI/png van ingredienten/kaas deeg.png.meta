@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e60b9214edbacd4aafd734fd0d298fd
+guid: 90d89915b322dce4d83ef23aa489bf8d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thee drink_0
+      name: kaas deeg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 542
-        height: 358
+        width: 784
+        height: 394
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c17f5f5510f728c4281af5527ee90cfe
-      internalID: 1771656296
+      spriteID: 71ee8e07a624cde4098f9f9b4f49cec0
+      internalID: 1024382029
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 50a1277de2eefd747825cf7c1f21873d
+    spriteID: 90456742ed1c9474d962dcc0cbf68f44
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      thee drink_0: 1771656296
+      kaas deeg_0: 1024382029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

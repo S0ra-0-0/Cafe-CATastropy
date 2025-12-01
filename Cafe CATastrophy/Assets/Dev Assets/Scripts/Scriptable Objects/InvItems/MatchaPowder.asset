@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Matcha Powder
   ingredient: 1
-  icon: {fileID: 21300000, guid: 3a92784f55267fa458b7c4b5cf4894f9, type: 3}
+  icon: {fileID: -691562808, guid: cac693d8b6e54c848a30819c14b002b8, type: 3}
   itemPrefab: {fileID: 6528692427007794921, guid: a5f52738507d94649a39b84227b1ce04, type: 3}
   description: Matcha powder. If you add this to hot water and whisk it, it makes
     matcha.

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItems
   itemName: Glass
   ingredient: 1
-  icon: {fileID: 21300000, guid: 68370a34bc51e8b499be9f546272b7bc, type: 3}
+  icon: {fileID: -1639517054, guid: 41551d74afee31347b32a1db2e788263, type: 3}
   itemPrefab: {fileID: 705917875424464802, guid: 20e422bd445f4ec428e1f6f7b1980f41, type: 3}
   description: An empty glass, to be used in a machine.
