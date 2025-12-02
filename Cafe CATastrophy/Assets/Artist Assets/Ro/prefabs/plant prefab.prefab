@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 89efae419735e294b94ef64641fbfbec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.32236
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 89efae419735e294b94ef64641fbfbec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.32236
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 89efae419735e294b94ef64641fbfbec, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.32236
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 89efae419735e294b94ef64641fbfbec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.2342415
       objectReference: {fileID: 0}
@@ -54,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 62a6c9f678ae00440b19a7e92b09f61f, type: 2}
     - target: {fileID: 919132149155446097, guid: 89efae419735e294b94ef64641fbfbec, type: 3}
       propertyPath: m_Name
-      value: plant
+      value: plant prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
