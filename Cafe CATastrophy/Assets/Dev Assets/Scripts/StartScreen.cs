@@ -14,6 +14,11 @@ public class StartScreen : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void ReturnToMain()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void ExitGame()
     {
         Debug.Log("Exiting Game");

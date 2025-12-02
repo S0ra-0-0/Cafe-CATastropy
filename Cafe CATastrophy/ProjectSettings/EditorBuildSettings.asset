@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Dev Assets/Scripts/Scenes/Main.unity
     guid: 86a80ebea8a115449b7edc6bc4e5e274
   - enabled: 1
+    path: Assets/Dev Assets/Scripts/Scenes/Credits.unity
+    guid: ddc5ccec8a4ec69489c1a5f3e17df384
+  - enabled: 1
     path: Assets/Dev Assets/Scripts/Scenes/EndScene.unity
     guid: 25d606736c0b9084aab6da3f0488438a
   m_configObjects:
