@@ -106,7 +106,7 @@ public class OrderManager : MonoBehaviour
                 Debug.Log($"Order {a.order.orderId} expired.");
                 ReplaceOrderAt(i);
                 anyExpired = true;
-                GameManager.Instance.AddTime(-10);
+                GameManager.Instance.RemoveTime(15);
                 GameManager.Instance.IncrementOrdersExpired(1);
             }
         }
