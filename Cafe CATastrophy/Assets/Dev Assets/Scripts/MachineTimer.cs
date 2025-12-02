@@ -4,7 +4,7 @@ public class MachineTimer : MonoBehaviour
 {
     // Timer for all machines (like cooking water, oven working etc)
 
-    public float totalTime = 2.5f;
+    public float totalTime = 1f;
     public bool isFinished = false;
 
     public void StartTimer()
