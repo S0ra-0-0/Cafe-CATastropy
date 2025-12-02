@@ -33,6 +33,7 @@ public class Combiner : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
             if (interactScript.isInteracting && inventoryManager.Items.Count > 0)
@@ -43,7 +44,6 @@ public class Combiner : MonoBehaviour
                     item1 = inventoryManager.Items[0];
                     inventoryManager.RemoveItem(inventoryManager.Items[0]);
                     Debug.Log("First item placed");
-                    // vfx that first item has been placed?
                 }
                 else if (item2 == null)
                 {
@@ -55,10 +55,6 @@ public class Combiner : MonoBehaviour
             
         }
 
-        if (item1 != null)
-        {
-            machineTimer.StartTimer();
-        }
 
         //combiner for all ingredients
         if (item1.itemName == "Glass" && item2.itemName == "Tea Leaf")
@@ -90,6 +86,12 @@ public class Combiner : MonoBehaviour
         if (item1.itemName == "Cheese Dough" && item2.itemName == "Plate")
         {
             
+        }
+
+        if (item1 != null)
+        {
+            machineTimer.StartTimer();
+            // make sure timer starts as soon as first item is placed
         }
     }
 }
