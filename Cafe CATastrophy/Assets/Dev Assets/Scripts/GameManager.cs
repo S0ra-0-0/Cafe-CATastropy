@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int totalGameTime = 0;
     public static GameManager Instance { get; private set; }
 
+    public List<InventoryItems> allItems = new List<InventoryItems>();
 
     private float currentTime;
     private bool timerIsRunning = false;
@@ -102,5 +105,27 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             totalGameTime += 1;
         }
+    }
+
+    /// <summary>
+    /// Gets an inventory item from the list by its name
+    /// </summary>
+    /// <param name="name">Name of the item</param>
+    /// <returns>returns an ScriptableObject inventory item</returns>
+    public InventoryItems GetItem(string name)
+    {
+        // korte versie
+        return allItems.Find(item => item.itemName == name);
+
+        // lange versie
+        /*
+        foreach (InventoryItems items in allItems)
+        {
+            if (items.itemName == name)
+            {
+                return items;
+            }
+        }
+        */
     }
 }
