@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4815036
+      value: -0.07247001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000011920929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.8160927
+      value: 3.5626798
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -120,3 +120,4 @@ MonoBehaviour:
   inventory: {fileID: 0}
   itemHoldPosistion: {fileID: 0}
   invImage: {fileID: 0}
+  inventoryManager: {fileID: 0}

@@ -16,7 +16,7 @@ public class ConveyerBelt : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.transform.position.y >= 1f)
+        if (collision.transform.position.y >= .9f)
         {
             Rigidbody rb = collision.collider.attachedRigidbody;
             rb.MovePosition(rb.position + direction.normalized * speed * Time.deltaTime);

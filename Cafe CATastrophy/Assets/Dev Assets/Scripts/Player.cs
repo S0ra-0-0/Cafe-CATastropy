@@ -23,26 +23,15 @@ public class PlayerGD1 : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        inventoryManager = GetComponent<InventoryManager>();
 
-        if (PlayerInputObj.playerIndex < Colors.Length)
-        {
-            GetComponentInChildren<MeshRenderer>().material = Colors[PlayerInputObj.playerIndex];
-        }
-        else
-        {
-            Debug.LogError("Player index out of range for Colors array!");
-        }
+        inventoryManager = GetComponent<InventoryManager>();
     }
 
 
     void Update()
     {
-        if (inventoryManager.Items[0] != null)
-        {
-            //code for player inventory in UI
-            invImage.sprite = inventoryManager.Items[0].icon;
-        }    
+        //code for player inventory in UI
+
 
 
         if (!isStunned)
@@ -79,9 +68,9 @@ public class PlayerGD1 : MonoBehaviour
                 Debug.Log("Spawning held item");
                 heldItem = Instantiate(
                  inventory.Items[0].itemPrefab,
-                 itemHoldPosistion.position, 
-                 inventory.Items[0].itemPrefab.transform.rotation,  
-                 itemHoldPosistion          
+                 itemHoldPosistion.position,
+                 inventory.Items[0].itemPrefab.transform.rotation,
+                 itemHoldPosistion
                   );
             }
             else if (inventory.Items[0].itemPrefab == null && heldItem != null)
