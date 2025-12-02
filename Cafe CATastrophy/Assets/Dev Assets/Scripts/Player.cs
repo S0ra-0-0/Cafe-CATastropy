@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerGD1 : MonoBehaviour
 {
@@ -15,14 +16,24 @@ public class PlayerGD1 : MonoBehaviour
     [SerializeField] private Transform itemHoldPosistion;
     private GameObject heldItem;
 
+    public Image invImage;
+    public InventoryManager inventoryManager;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        inventoryManager = GetComponent<InventoryManager>();
     }
 
 
     void Update()
     {
+        //code for player inventory in UI
+
+
+
         if (!isStunned)
         {
             Vector2 input = PlayerInputObj.actions["Move"].ReadValue<Vector2>();
