@@ -12,9 +12,9 @@ public class PlayerManagerGD1 : MonoBehaviour
     {
         player.gameObject.transform.position = SpawnPoints[player.playerIndex].position;
 
+        //change player prefab per player spawned in
+
         OrderManager.Instance.StartOrders();
         GameManager.Instance.StartTimer();
-
-
     }
 }

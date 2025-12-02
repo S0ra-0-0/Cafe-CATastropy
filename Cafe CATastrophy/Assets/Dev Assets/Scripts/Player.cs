@@ -38,8 +38,11 @@ public class PlayerGD1 : MonoBehaviour
 
     void Update()
     {
-        //code for player inventory in UI
-        
+        if (inventoryManager.Items[0] != null)
+        {
+            //code for player inventory in UI
+            invImage.sprite = inventoryManager.Items[0].icon;
+        }    
 
 
         if (!isStunned)
