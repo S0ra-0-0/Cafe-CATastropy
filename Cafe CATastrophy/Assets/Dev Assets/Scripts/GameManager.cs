@@ -1,8 +1,9 @@
-using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,25 +11,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI addTimerText;
     [SerializeField] private TextMeshProUGUI removeTimerText;
-    [SerializeField] private int totalGameTime = 0;
-    public static GameManager Instance { get; private set; }
 
     public List<InventoryItems> allItems = new List<InventoryItems>();
+
+    public int OrdersCompleted = 0;
+    public int OrdersExpired = 0;
+    public static GameManager Instance { get; private set; }
+
 
     private float currentTime;
     private bool timerIsRunning = false;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
+        if (Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+
     void Start()
     {
         currentTime = gameTimer;
@@ -38,7 +42,6 @@ public class GameManager : MonoBehaviour
     public void StartTimer()
     {
         timerIsRunning = true;
-        StartCoroutine(trackGameTime());
     }
 
     void Update()
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Time has run out!");
                 currentTime = 0;
+                SceneManager.LoadScene("EndScene");
                 timerIsRunning = false;
             }
         }
@@ -66,7 +70,6 @@ public class GameManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timerText.text = string.Format("Time left: {0:00}:{1:00}", minutes, seconds);
     }
-
     public void AddTime(int seconds)
     {
         currentTime += seconds;
@@ -98,14 +101,25 @@ public class GameManager : MonoBehaviour
         timerText.color = Color.black;
     }
 
-    private IEnumerator trackGameTime()
+    public void IncrementOrdersCompleted(int amount)
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
-            totalGameTime += 1;
-        }
+        OrdersCompleted = +amount;
     }
+
+    public void IncrementOrdersExpired(int amount)
+    {
+        OrdersExpired = +amount;
+    }
+
+    internal void OnSceneLoaded(EndSceneManager endSceneManager)
+    {
+        throw new NotImplementedException();
+    }
+
+
+
+
+
 
     /// <summary>
     /// Gets an inventory item from the list by its name

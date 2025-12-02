@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public abstract class CatBase : MonoBehaviour
 {
@@ -260,6 +260,12 @@ public abstract class CatBase : MonoBehaviour
     protected virtual void OnEnterJumpOn()
     {
         EnableRBMovement();
+
+        rb = GetComponent<Rigidbody>();
+        BoxCollider collider = GetComponent<BoxCollider>();
+
+        collider.size = new Vector3(1, 1, 1);
+        collider.center = new Vector3(0, 0.3f, 0);
         animator.SetFloat("Speed", 0);
 
         jumpTimer = 0f;
@@ -372,7 +378,7 @@ public abstract class CatBase : MonoBehaviour
                 if (inventory != null && inventory.Items.Count > 0)
                 {
                     if (inventory.Items[0].itemName == "Broom")
-                    { 
+                    {
                         Vector3 broomPos = player.transform.position;
                         float distance = Vector3.Distance(transform.position, broomPos);
                         if (distance < 3f)
@@ -389,7 +395,7 @@ public abstract class CatBase : MonoBehaviour
 
     private IEnumerator scareAnimation()
     {
-        animator.SetFloat("Speed",0);
+        animator.SetFloat("Speed", 0);
         animator.SetTrigger("Scare");
         yield return new WaitForSeconds(.8f);
     }

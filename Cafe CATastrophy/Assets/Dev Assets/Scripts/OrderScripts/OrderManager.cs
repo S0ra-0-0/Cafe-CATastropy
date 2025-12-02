@@ -7,13 +7,12 @@ public class OrderManager : MonoBehaviour
     public Order[] availableOrders;
     [SerializeField] private OrderGenerator orderGenerator;
     [SerializeField] private OrderUI orderUI;
-    [SerializeField] private GameManager gameManager;
 
     [Header("Order timing")]
     [Tooltip("Minimum time (seconds) for each order before it expires.")]
     [SerializeField] private float minOrderDuration = 15f;
     [Tooltip("Maximum time (seconds) for each order before it expires.")]
-    [SerializeField] private float maxOrderDuration = 30f;
+    [SerializeField] private float maxOrderDuration = 15f;
 
     private class ActiveOrder
     {
@@ -107,7 +106,8 @@ public class OrderManager : MonoBehaviour
                 Debug.Log($"Order {a.order.orderId} expired.");
                 ReplaceOrderAt(i);
                 anyExpired = true;
-                gameManager.RemoveTime(10);
+                GameManager.Instance.AddTime(-10);
+                GameManager.Instance.IncrementOrdersExpired(1);
             }
         }
 
@@ -129,7 +129,7 @@ public class OrderManager : MonoBehaviour
         {
             Order newOrder = orderGenerator.GenerateRandomOrder();
             availableOrders[i] = newOrder;
-            int randomOrderDuration = Random.Range(3, 15);
+            int randomOrderDuration = Random.Range(30, 61);
             activeOrders[i] = new ActiveOrder(newOrder, randomOrderDuration);
         }
 
@@ -160,7 +160,8 @@ public class OrderManager : MonoBehaviour
                 if (active.IsComplete())
                 {
                     Debug.Log($"Order {active.order.orderId} completed!");
-                    gameManager.AddTime(40);
+                    GameManager.Instance.AddTime(20);
+                    GameManager.Instance.IncrementOrdersCompleted(1);
                     ReplaceOrderAt(i);
                 }
                 return;
@@ -180,7 +181,7 @@ public class OrderManager : MonoBehaviour
 
         Order newOrder = orderGenerator.GenerateRandomOrder();
         availableOrders[index] = newOrder;
-        int randomOrderDuration = Random.Range(24, 61);
+        int randomOrderDuration = Random.Range(30, 61);
         activeOrders[index] = new ActiveOrder(newOrder, randomOrderDuration);
 
         Debug.Log($"Replaced order at slot {index} with new order {newOrder.orderId}");
