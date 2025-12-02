@@ -4902,7 +4902,7 @@ MonoBehaviour:
   inRange: 0
   itemOnCounter: {fileID: 0}
   counterPosition:
-  - {fileID: 0}
+  - {fileID: 2093302805}
 --- !u!95 &773981394
 Animator:
   serializedVersion: 7
@@ -6136,7 +6136,9 @@ MonoBehaviour:
   timerText: {fileID: 2069590214}
   addTimerText: {fileID: 8125055114257237341, guid: 3552bff6e8f59c14aa09f3ac1e9e68bb, type: 3}
   removeTimerText: {fileID: 8125055114257237341, guid: 224d0347f5f8dda4094d251a2d2a7277, type: 3}
-  totalGameTime: 0
+  allItems: []
+  OrdersCompleted: 0
+  OrdersExpired: 0
 --- !u!1 &916851938
 GameObject:
   m_ObjectHideFlags: 0
@@ -8876,7 +8878,6 @@ MonoBehaviour:
   availableOrders: []
   orderGenerator: {fileID: 153582961}
   orderUI: {fileID: 1296553174}
-  gameManager: {fileID: 906492058}
   minOrderDuration: 15
   maxOrderDuration: 30
 --- !u!114 &1296553174
