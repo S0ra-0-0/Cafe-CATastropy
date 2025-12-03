@@ -1,8 +1,7 @@
-using NUnit.Framework;
+
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class InventoryManager : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class InventoryManager : MonoBehaviour
 
     public void Update()
     {
-        
+
         if (Items.Count > 1)
         {
             //limit inventory size to 1
@@ -34,7 +33,7 @@ public class InventoryManager : MonoBehaviour
         //    P1Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
         //    P2Inv.GetComponent<SpriteRenderer>().sprite = Items[0].icon;
         //}
-        
+
     }
 
     public void ClearInventory()
@@ -47,7 +46,8 @@ public class InventoryManager : MonoBehaviour
         Items.Add(item);
     }
 
-    public void RemoveItem(InventoryItems item) {
+    public void RemoveItem(InventoryItems item)
+    {
         Items.Remove(item);
     }
 }
