@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerManagerGD1 : MonoBehaviour
 {
@@ -7,13 +8,15 @@ public class PlayerManagerGD1 : MonoBehaviour
     public GameObject[] PlayerPrefabs;
 
     public PlayerInputManager playerInputManager;
+    private int playerIndex;
 
     public void SetSpawn(PlayerInput _player)
     {
+        playerIndex = _player.playerIndex;
         _player.gameObject.transform.position = SpawnPoints[_player.playerIndex].position;
 
         OrderManager.Instance.StartOrders();
         GameManager.Instance.StartTimer();
+        playerInputManager.playerPrefab = PlayerPrefabs[1];
     }
-
 }
