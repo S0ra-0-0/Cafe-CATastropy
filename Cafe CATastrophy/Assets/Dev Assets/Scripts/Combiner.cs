@@ -89,7 +89,6 @@ public class Combiner : MonoBehaviour
         if (item1.itemName == item1name && item2.itemName == item2name && machineTimer.isFinished)
         {
             item1 = item2 = null;
-            Debug.Log(result);
             finalProduct = GameManager.Instance.GetItem(result);
             itemOnCounter = finalProduct;
             GameObject orderProduct = Instantiate(finalProduct.itemPrefab, transform.position, Quaternion.identity, transform);

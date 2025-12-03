@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
+    public AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = AudioManager.Instance;
+        audioManager.PlaySound("StartScreen");
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("Main");
@@ -16,7 +23,7 @@ public class StartScreen : MonoBehaviour
 
     public void ReturnToMain()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Start");
     }
 
     public void ExitGame()
