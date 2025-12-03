@@ -11,8 +11,7 @@ public class PlayerManagerGD1 : MonoBehaviour
     {
         OrderManager.Instance.StartOrders();
         GameManager.Instance.StartTimer();
-        player.gameObject.transform.position = SpawnPoints[player.playerIndex].transform.position;
 
-
+        player.gameObject.transform.position = SpawnPoints[player.playerIndex +1].transform.position;
     }
 }
