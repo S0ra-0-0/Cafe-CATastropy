@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Time has run out!");
                 currentTime = 0;
                 SceneManager.LoadScene("EndScene");
+                AudioManager.Instance.PlaySound("Win");
                 timerIsRunning = false;
             }
         }

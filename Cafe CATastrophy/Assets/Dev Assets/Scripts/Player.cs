@@ -17,11 +17,12 @@ public class PlayerGD1 : MonoBehaviour
     [SerializeField] private Transform itemHoldPosistion;
     private GameObject heldItem;
 
+    [SerializeField] private GameObject secondPlayer;
+
     public int PlayerID;
 
     public Image invImage;
     public InventoryManager inventoryManager;
-
 
     private void Start()
     {
@@ -29,11 +30,26 @@ public class PlayerGD1 : MonoBehaviour
 
         inventoryManager = GetComponent<InventoryManager>();
 
+
+        PlayerID = (PlayerInputObj != null) ? PlayerInputObj.playerIndex : 0;
+
+        if (secondPlayer != null && PlayerID == 1)
+        {
+            Destroy(this.gameObject);
+
+        }
+
         invImage = GameObject.Find("Player" + (PlayerID + 1) + "Inventory").GetComponent<Image>();
 
         PlayerManagerGD1 playerManager = FindAnyObjectByType<PlayerManagerGD1>();
 
         playerManager.SetSpawn(PlayerInputObj);
+
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(secondPlayer, transform.position, Quaternion.identity);
 
     }
 

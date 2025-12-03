@@ -107,6 +107,7 @@ public class OrderManager : MonoBehaviour
                 ReplaceOrderAt(i);
                 anyExpired = true;
                 GameManager.Instance.RemoveTime(15);
+                AudioManager.Instance.PlaySound("Lose");
                 GameManager.Instance.IncrementOrdersExpired(1);
             }
         }
@@ -162,6 +163,7 @@ public class OrderManager : MonoBehaviour
                     Debug.Log($"Order {active.order.orderId} completed!");
                     GameManager.Instance.AddTime(20);
                     GameManager.Instance.IncrementOrdersCompleted(1);
+                    AudioManager.Instance.PlaySound("Ping");
                     ReplaceOrderAt(i);
                 }
                 return;

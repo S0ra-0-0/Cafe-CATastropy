@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class CatManager : MonoBehaviour
 {
@@ -32,6 +32,8 @@ public class CatManager : MonoBehaviour
             if (currentNumberOfCats < maxNumberOfCats && playerFound)
             {
                 SpawnCat();
+
+                AudioManager.Instance.PlaySound("Meow" + Random.Range(0, 7));
                 yield return new WaitForSeconds(spawnInterval);
             }
             else

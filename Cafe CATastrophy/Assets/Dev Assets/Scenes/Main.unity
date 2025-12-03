@@ -10062,7 +10062,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   soundEffects:
-  - {fileID: 11400000, guid: a01dc282e1822a34fa37c027b139cd55, type: 2}
+  - {fileID: 11400000, guid: 2a5c3f4d6a6a98d4498a5b8cfdc321a1, type: 2}
+  - {fileID: 11400000, guid: fb227ae91b154e74ea4d50190b615e6b, type: 2}
+  - {fileID: 11400000, guid: 0f00efc5826248f4794469235f361f2a, type: 2}
+  - {fileID: 11400000, guid: 89ccab9dcd8a8684e9ebeff10259e855, type: 2}
+  - {fileID: 11400000, guid: 67726d307ce111e46823543115fb3182, type: 2}
+  - {fileID: 11400000, guid: 9f84d7bfcbcb1a744ad33ecd9b2b65e4, type: 2}
+  - {fileID: 11400000, guid: 3e50a1369fbd2d34fac026e36c17ab95, type: 2}
+  - {fileID: 11400000, guid: 947b2a38e8c194c45ab1410ac29de295, type: 2}
+  - {fileID: 11400000, guid: cb6e0d78ec28df24f81bb66e2f072493, type: 2}
+  - {fileID: 11400000, guid: c08d3dfb191a89d4e89cf5f11f4bc284, type: 2}
+  - {fileID: 11400000, guid: ae0f603464ee34246b167b671bb77ec0, type: 2}
 --- !u!82 &1513469602
 AudioSource:
   m_ObjectHideFlags: 0

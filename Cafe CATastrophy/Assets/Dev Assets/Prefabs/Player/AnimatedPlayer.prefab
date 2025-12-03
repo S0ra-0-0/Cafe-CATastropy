@@ -453,6 +453,7 @@ MonoBehaviour:
   walkThreshold: 0.1
   inventory: {fileID: -3134065648472908178}
   itemHoldPosistion: {fileID: 2328664851650783331}
+  secondPlayer: {fileID: 7115386532000998823, guid: 8fea20d489ce325479fbbf54a46ca0a9, type: 3}
   PlayerID: 0
   invImage: {fileID: 0}
   inventoryManager: {fileID: 0}
@@ -548,7 +549,7 @@ MonoBehaviour:
     m_ActionId: 4ba77412-7d06-4b73-84fd-47d0511ad6d8
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 784e158de1c9b7046b296e31200b4ddf, type: 3}
-  m_Name: Test
+  m_Name: Meow 4
   m_EditorClassIdentifier: Assembly-CSharp::SoundEffect
-  soundName: Test
-  clip: {fileID: 8300000, guid: fe08f6905e8b917488b09860ae3930df, type: 3}
+  soundName: Meow4
+  clip: {fileID: 8300000, guid: 76cc79b87fb001241935e09c4ce122f1, type: 3}
