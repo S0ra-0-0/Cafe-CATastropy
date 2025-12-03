@@ -31,6 +31,10 @@ public class PlayerGD1 : MonoBehaviour
 
         invImage = GameObject.Find("Player" + (PlayerID + 1) + "Inventory").GetComponent<Image>();
 
+        PlayerManagerGD1 playerManager = FindAnyObjectByType<PlayerManagerGD1>();
+
+        playerManager.SetSpawn(PlayerInputObj);
+
     }
 
 

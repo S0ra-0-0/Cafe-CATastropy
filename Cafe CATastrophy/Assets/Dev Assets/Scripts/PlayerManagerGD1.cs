@@ -6,11 +6,12 @@ public class PlayerManagerGD1 : MonoBehaviour
     public Transform[] SpawnPoints;
     public GameObject[] PlayerPrefabs;
 
-    public void SetSpawn(PlayerInput player)
+    public void SetSpawn(PlayerInput _player)
     {
-        int index = player.playerIndex;
+        Debug.Log(_player.playerIndex + " spawned at " + SpawnPoints[_player.playerIndex].position);
 
-        GameObject playerObj = Instantiate(PlayerPrefabs[index], SpawnPoints[index].position, SpawnPoints[index].rotation);
+
+        _player.gameObject.transform.position = SpawnPoints[_player.playerIndex].position;
 
         OrderManager.Instance.StartOrders();
         GameManager.Instance.StartTimer();
