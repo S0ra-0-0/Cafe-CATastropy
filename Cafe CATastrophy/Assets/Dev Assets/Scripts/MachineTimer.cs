@@ -21,4 +21,10 @@ public class MachineTimer : MonoBehaviour
             totalTime = 1f;
         }
     }
+
+    public void ResetTimer()
+    {
+        totalTime = 1f;
+        isFinished = false;
+    }
 }

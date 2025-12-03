@@ -59,8 +59,10 @@ public class Combiner : MonoBehaviour
             machineTimer.StartTimer();
             // make sure timer starts as soon as first item is placed
         }
+    }
 
-        //combiner for all ingredients
+    private void Update()
+    {
         TryCreate("Glass", "Tea Leaf", "Tea");
         TryCreate("Glass", "Coffee Beans", "Coffee");
         TryCreate("Glass", "Matcha Powder", "Matcha");
@@ -75,7 +77,12 @@ public class Combiner : MonoBehaviour
         if (item1.itemName == item1name && item2.itemName == item2name && machineTimer.isFinished)
         {
             item1 = item2 = null;
-            Instantiate(GameManager.Instance.GetItem(result).itemPrefab, transform.position, Quaternion.identity);
+            finalProduct = GameManager.Instance.GetItem(result);
+            inventoryManager.AddItem(finalProduct);
+            //Instantiate(GameManager.Instance.GetItem(result).itemPrefab, transform.position, Quaternion.identity);
+
+            machineTimer.ResetTimer();
+
         }
     }
 }
