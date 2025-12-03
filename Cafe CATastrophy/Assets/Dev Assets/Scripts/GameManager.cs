@@ -132,10 +132,10 @@ public class GameManager : MonoBehaviour
     public InventoryItems GetItem(string name)
     {
         // korte versie
-        return allItems.Find(item => item.itemName == name);
+        //return allItems.Find(item => item.itemName == name);
 
         // lange versie
-        /*
+
         foreach (InventoryItems items in allItems)
         {
             if (items.itemName == name)
@@ -143,6 +143,6 @@ public class GameManager : MonoBehaviour
                 return items;
             }
         }
-        */
+        return null;
     }
 }

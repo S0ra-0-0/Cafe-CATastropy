@@ -1,6 +1,3 @@
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Combiner : MonoBehaviour
@@ -77,6 +74,7 @@ public class Combiner : MonoBehaviour
         if (item1.itemName == item1name && item2.itemName == item2name && machineTimer.isFinished)
         {
             item1 = item2 = null;
+            Debug.Log(result + " created!");
             finalProduct = GameManager.Instance.GetItem(result);
             Instantiate(finalProduct.itemPrefab, transform.position, Quaternion.identity);
 
