@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784e158de1c9b7046b296e31200b4ddf, type: 3}
   m_Name: StartScreen
   m_EditorClassIdentifier: Assembly-CSharp::SoundEffect
-  soundName: 
-  clip: {fileID: 0}
+  soundName: StartScreen
+  clip: {fileID: 8300000, guid: a1c60bb39d80c9e449f4a4aa97d74a52, type: 3}
