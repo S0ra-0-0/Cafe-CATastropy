@@ -78,8 +78,7 @@ public class Combiner : MonoBehaviour
         {
             item1 = item2 = null;
             finalProduct = GameManager.Instance.GetItem(result);
-            inventoryManager.AddItem(finalProduct);
-            //Instantiate(GameManager.Instance.GetItem(result).itemPrefab, transform.position, Quaternion.identity);
+            Instantiate(finalProduct.itemPrefab, transform.position, Quaternion.identity);
 
             machineTimer.ResetTimer();
 

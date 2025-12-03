@@ -959,6 +959,7 @@ GameObject:
   - component: {fileID: 234444023}
   - component: {fileID: 234444022}
   - component: {fileID: 234444025}
+  - component: {fileID: 234444027}
   - component: {fileID: 234444026}
   m_Layer: 3
   m_Name: Tea Machine
@@ -1101,6 +1102,20 @@ MonoBehaviour:
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
+--- !u!114 &234444027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234444019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9acf63f63893f4a8adbb26496bc46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MachineTimer
+  totalTime: 1
+  isFinished: 0
 --- !u!1 &257983590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,6 +3164,7 @@ GameObject:
   - component: {fileID: 549616480}
   - component: {fileID: 549616479}
   - component: {fileID: 549616482}
+  - component: {fileID: 549616484}
   - component: {fileID: 549616483}
   m_Layer: 3
   m_Name: Coffee Machine
@@ -3291,6 +3307,20 @@ MonoBehaviour:
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
+--- !u!114 &549616484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549616476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9acf63f63893f4a8adbb26496bc46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MachineTimer
+  totalTime: 1
+  isFinished: 0
 --- !u!1001 &568865269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5860,6 +5890,7 @@ GameObject:
   - component: {fileID: 895017675}
   - component: {fileID: 895017674}
   - component: {fileID: 895017677}
+  - component: {fileID: 895017679}
   - component: {fileID: 895017678}
   m_Layer: 3
   m_Name: Oven 1
@@ -6002,6 +6033,20 @@ MonoBehaviour:
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
+--- !u!114 &895017679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895017671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9acf63f63893f4a8adbb26496bc46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MachineTimer
+  totalTime: 1
+  isFinished: 0
 --- !u!1 &900231705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,6 +6637,7 @@ GameObject:
   - component: {fileID: 936226322}
   - component: {fileID: 936226321}
   - component: {fileID: 936226324}
+  - component: {fileID: 936226326}
   - component: {fileID: 936226325}
   m_Layer: 3
   m_Name: Oven 2
@@ -6734,6 +6780,20 @@ MonoBehaviour:
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
+--- !u!114 &936226326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936226318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9acf63f63893f4a8adbb26496bc46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MachineTimer
+  totalTime: 1
+  isFinished: 0
 --- !u!1 &938996715
 GameObject:
   m_ObjectHideFlags: 0
