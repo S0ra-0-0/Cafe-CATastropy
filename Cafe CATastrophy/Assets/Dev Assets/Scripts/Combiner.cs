@@ -9,7 +9,6 @@ public class Combiner : MonoBehaviour
 
     public InventoryItems item1;
     public InventoryItems item2;
-
     public InventoryItems finalProduct;
 
     private ScriptableObject[] allItems;
@@ -74,7 +73,7 @@ public class Combiner : MonoBehaviour
         if (item1.itemName == item1name && item2.itemName == item2name && machineTimer.isFinished)
         {
             item1 = item2 = null;
-            Debug.Log(result + " created!");
+            Debug.Log(result);
             finalProduct = GameManager.Instance.GetItem(result);
             Instantiate(finalProduct.itemPrefab, transform.position, Quaternion.identity);
 

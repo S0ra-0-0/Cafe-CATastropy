@@ -6251,7 +6251,22 @@ MonoBehaviour:
   addTimerText: {fileID: 8125055114257237341, guid: 3552bff6e8f59c14aa09f3ac1e9e68bb, type: 3}
   removeTimerText: {fileID: 8125055114257237341, guid: 224d0347f5f8dda4094d251a2d2a7277, type: 3}
   playerCount: 0
-  allItems: []
+  allItems:
+  - {fileID: 11400000, guid: 7dd1323bc1b5e6c40892998b69578aae, type: 2}
+  - {fileID: 11400000, guid: 8e5794e4cbef37146b3de6957d06cd2e, type: 2}
+  - {fileID: 11400000, guid: 90c3ca2856a22474680ddcb2ac5ba47e, type: 2}
+  - {fileID: 11400000, guid: 0d4c6f3d4512ee14f9d67b77fb4cb830, type: 2}
+  - {fileID: 11400000, guid: b67fe4af6914948448cdfb08b9688292, type: 2}
+  - {fileID: 11400000, guid: c23907b3b66d73742bf8f7e6e7761880, type: 2}
+  - {fileID: 11400000, guid: 05a258c34cdad454d94fd23ec0187469, type: 2}
+  - {fileID: 11400000, guid: 478e6d4f47f638e4085bc1e5b01d7302, type: 2}
+  - {fileID: 11400000, guid: ffc1889726ad7fc43a19490abd09cd6b, type: 2}
+  - {fileID: 11400000, guid: cfcc5a57c8ee84f49849c3cfd4123ad9, type: 2}
+  - {fileID: 11400000, guid: db319f02c173d2649ad454c151cb4112, type: 2}
+  - {fileID: 11400000, guid: 5be6df61ec85a6341ad90c38d192e548, type: 2}
+  - {fileID: 11400000, guid: 9e73fd9f1efbdf84a933f553248fd770, type: 2}
+  - {fileID: 11400000, guid: 21ac5542fb5a1844c839a7bb44d6795d, type: 2}
+  - {fileID: 11400000, guid: 926bda94764fb8a4db6e0aa182c92081, type: 2}
   OrdersCompleted: 0
   OrdersExpired: 0
 --- !u!1 &916851938
