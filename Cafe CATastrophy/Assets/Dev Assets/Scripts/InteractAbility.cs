@@ -16,6 +16,7 @@ public class InteractAbility : MonoBehaviour
         inventoryManager = GetComponent<InventoryManager>();
         playerInputObj = GetComponent<PlayerInput>();
     }
+
     public void DoInteract(InputAction.CallbackContext context)
     {
         if (context.performed)

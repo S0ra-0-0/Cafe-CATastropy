@@ -18,6 +18,7 @@ public class MachineTimer : MonoBehaviour
         if (totalTime <= 0)
         {
             isFinished = true;
+            totalTime = 1f;
         }
     }
 }
