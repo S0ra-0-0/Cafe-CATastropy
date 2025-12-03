@@ -1638,6 +1638,9 @@ MonoBehaviour:
   walkThreshold: 0.1
   inventory: {fileID: -3134065648472908178}
   itemHoldPosistion: {fileID: 2328664851650783331}
+  PlayerID: 0
+  invImage: {fileID: 0}
+  inventoryManager: {fileID: 0}
 --- !u!114 &5788080168397061753
 MonoBehaviour:
   m_ObjectHideFlags: 0

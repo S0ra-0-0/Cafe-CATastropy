@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::SoundEffect
   soundName: Test
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: fe08f6905e8b917488b09860ae3930df, type: 3}

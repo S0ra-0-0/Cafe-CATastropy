@@ -104,21 +104,41 @@ PrefabInstance:
       value: -0.70840025
       objectReference: {fileID: 0}
     - target: {fileID: -6073069633622227841, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6073069633622227841, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8a607aabaa442fe49858bf8c7c9e7cce, type: 2}
+    - target: {fileID: -5957429892616016633, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5957429892616016633, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8a607aabaa442fe49858bf8c7c9e7cce, type: 2}
     - target: {fileID: -5116163209841363530, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116163209841363530, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8a607aabaa442fe49858bf8c7c9e7cce, type: 2}
     - target: {fileID: -4749261312798542468, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4749261312798542468, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8a607aabaa442fe49858bf8c7c9e7cce, type: 2}
+    - target: {fileID: -2944776497162196852, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2944776497162196852, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -144,9 +164,17 @@ PrefabInstance:
       value: -0.000004637042
       objectReference: {fileID: 0}
     - target: {fileID: -1206874426333947015, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1206874426333947015, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8a607aabaa442fe49858bf8c7c9e7cce, type: 2}
+    - target: {fileID: 104838149769886274, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 104838149769886274, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -248,6 +276,10 @@ PrefabInstance:
       value: -2.2419
       objectReference: {fileID: 0}
     - target: {fileID: 4917997153756924688, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917997153756924688, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8a607aabaa442fe49858bf8c7c9e7cce, type: 2}
@@ -286,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 6691711646365460578, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15.163407
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255360004411924474, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7255360004411924474, guid: f7ae8ae17e9097945bec8568e6ea5eff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -417,6 +453,9 @@ MonoBehaviour:
   walkThreshold: 0.1
   inventory: {fileID: -3134065648472908178}
   itemHoldPosistion: {fileID: 2328664851650783331}
+  PlayerID: 0
+  invImage: {fileID: 0}
+  inventoryManager: {fileID: 0}
 --- !u!114 &5788080168397061753
 MonoBehaviour:
   m_ObjectHideFlags: 0

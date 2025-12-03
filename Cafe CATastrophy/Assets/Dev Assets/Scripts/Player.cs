@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+
 public class PlayerGD1 : MonoBehaviour
 {
     private Vector3 m_Movement;
@@ -16,6 +17,8 @@ public class PlayerGD1 : MonoBehaviour
     [SerializeField] private Transform itemHoldPosistion;
     private GameObject heldItem;
 
+    public int PlayerID;
+
     public Image invImage;
     public InventoryManager inventoryManager;
 
@@ -25,12 +28,28 @@ public class PlayerGD1 : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         inventoryManager = GetComponent<InventoryManager>();
+
+        invImage = GameObject.Find("Player" + (PlayerID + 1) + "Inventory").GetComponent<Image>();
+
     }
 
 
     void Update()
     {
-        //code for player inventory in UI
+        if (inventory.Items.Count > 0)
+        {
+            invImage.sprite = inventory.Items[0].icon;
+            invImage.type = Image.Type.Simple;
+            invImage.preserveAspect = true;
+            invImage.enabled = true;
+        }
+        else
+        {
+            invImage.enabled = false;
+        }
+
+
+
 
 
 

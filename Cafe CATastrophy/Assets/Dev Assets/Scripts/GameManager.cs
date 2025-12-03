@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI addTimerText;
     [SerializeField] private TextMeshProUGUI removeTimerText;
 
+    public int playerCount = 0;
+
     public List<InventoryItems> allItems = new List<InventoryItems>();
 
     public int OrdersCompleted = 0;
