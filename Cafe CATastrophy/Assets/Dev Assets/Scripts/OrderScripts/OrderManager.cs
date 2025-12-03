@@ -10,9 +10,9 @@ public class OrderManager : MonoBehaviour
 
     [Header("Order timing")]
     [Tooltip("Minimum time (seconds) for each order before it expires.")]
-    [SerializeField] private float minOrderDuration = 15f;
+    [SerializeField] private int minOrderDuration = 40;
     [Tooltip("Maximum time (seconds) for each order before it expires.")]
-    [SerializeField] private float maxOrderDuration = 15f;
+    [SerializeField] private int maxOrderDuration = 70;
 
     private class ActiveOrder
     {
@@ -130,7 +130,7 @@ public class OrderManager : MonoBehaviour
         {
             Order newOrder = orderGenerator.GenerateRandomOrder();
             availableOrders[i] = newOrder;
-            int randomOrderDuration = Random.Range(30, 61);
+            int randomOrderDuration = Random.Range(minOrderDuration, maxOrderDuration);
             activeOrders[i] = new ActiveOrder(newOrder, randomOrderDuration);
         }
 
@@ -183,7 +183,7 @@ public class OrderManager : MonoBehaviour
 
         Order newOrder = orderGenerator.GenerateRandomOrder();
         availableOrders[index] = newOrder;
-        int randomOrderDuration = Random.Range(30, 61);
+        int randomOrderDuration = Random.Range(minOrderDuration, maxOrderDuration);
         activeOrders[index] = new ActiveOrder(newOrder, randomOrderDuration);
 
         Debug.Log($"Replaced order at slot {index} with new order {newOrder.orderId}");

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int gameTimer = 300;
+    [SerializeField] private int gameTimer = 450;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI addTimerText;
     [SerializeField] private TextMeshProUGUI removeTimerText;
