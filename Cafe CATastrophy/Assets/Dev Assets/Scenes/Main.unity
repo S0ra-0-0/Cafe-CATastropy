@@ -778,8 +778,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.641493}
-  m_Center: {x: -3.928531e-10, y: 0, z: -0.3207474}
+  m_Size: {x: 1.463363, y: 1, z: 1.9147142}
+  m_Center: {x: -0.23168163, y: 0, z: -0.4573576}
 --- !u!114 &203429037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,12 +999,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6840348, y: 1, z: 1}
-  m_Center: {x: -0.34201732, y: 0, z: -1.6598198e-10}
+  m_Size: {x: 2.1358588, y: 1, z: 0.73776364}
+  m_Center: {x: -0.5679296, y: 0, z: 0.018473865}
 --- !u!23 &234444023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1077,7 +1077,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1099,6 +1099,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   machineTimer: {fileID: 0}
+  itemOnCounter: {fileID: 0}
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
@@ -1845,7 +1846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 288, y: 0}
+  m_AnchoredPosition: {x: -1325, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355639387
@@ -2956,8 +2957,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3283758, y: 1, z: 0.8389397}
-  m_Center: {x: 0.026725696, y: 0, z: -0.27039573}
+  m_Size: {x: 2.3629978, y: 1, z: 0.598468}
+  m_Center: {x: 0.009414253, y: 0, z: -0.27697486}
 --- !u!1 &537545309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3182,7 +3183,7 @@ Transform:
   m_GameObject: {fileID: 549616476}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70367205, z: -0, w: -0.710525}
-  m_LocalPosition: {x: -0.03, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0, z: -0.16}
   m_LocalScale: {x: 1.1999999, y: 1, z: 1.1999999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3286,8 +3287,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6838348, y: 1, z: 1.0000001}
-  m_Center: {x: -0.34191686, y: 0, z: -0.0000002485067}
+  m_Size: {x: 2.123677, y: 1, z: 0.8084777}
+  m_Center: {x: -0.56183875, y: 0, z: 0.02034241}
 --- !u!114 &549616483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,6 +3305,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   machineTimer: {fileID: 0}
+  itemOnCounter: {fileID: 0}
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
@@ -4267,7 +4269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.00006, y: 0}
+  m_AnchoredPosition: {x: -1047, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &646445869
@@ -5053,8 +5055,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 38.089043, y: 1.4201549, z: 3.5824683}
-  m_Center: {x: 2.9185371, y: 0.21007752, z: 0.60648763}
+  m_Size: {x: 38.089043, y: 1.4201549, z: 3.0816107}
+  m_Center: {x: 2.9185371, y: 0.21007752, z: 0.35605872}
 --- !u!65 &773981396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5356,7 +5358,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.35, y: 1.045, z: -3.19}
-  m_LocalScale: {x: 1.65464, y: 1, z: 2.5178974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 980274314}
@@ -5859,8 +5861,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999976, y: 1, z: 3.5051947}
-  m_Center: {x: -0.00000011319024, y: 0, z: -1.2525885}
+  m_Size: {x: 0.99999976, y: 1, z: 4.3337684}
+  m_Center: {x: -0.000000113561214, y: 0, z: -1.666873}
 --- !u!114 &889296538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5934,8 +5936,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.680803, y: 1, z: 1}
-  m_Center: {x: -0.34040174, y: 0, z: 5.639242e-10}
+  m_Size: {x: 2.0402942, y: 1, z: 1}
+  m_Center: {x: -0.520147, y: 0, z: 5.401757e-10}
 --- !u!23 &895017675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6030,6 +6032,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   machineTimer: {fileID: 0}
+  itemOnCounter: {fileID: 0}
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
@@ -6077,7 +6080,7 @@ Transform:
   m_GameObject: {fileID: 900231705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.43, y: -1.67, z: -13.35}
+  m_LocalPosition: {x: 4.47, y: -1.67, z: -13.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6696,8 +6699,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.689487, y: 1, z: 1}
-  m_Center: {x: -0.34474498, y: 0, z: -3.2772113e-10}
+  m_Size: {x: 2.0449257, y: 1, z: 1}
+  m_Center: {x: -0.52246475, y: 0, z: -1.7588181e-10}
 --- !u!23 &936226322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6792,6 +6795,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   interactScript: {fileID: 0}
   machineTimer: {fileID: 0}
+  itemOnCounter: {fileID: 0}
   item1: {fileID: 0}
   item2: {fileID: 0}
   finalProduct: {fileID: 0}
@@ -8559,8 +8563,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99457073, y: 1, z: 3.1050744}
-  m_Center: {x: 0.002714623, y: 0, z: -1.0525322}
+  m_Size: {x: 0.77427334, y: 1, z: 4.4506464}
+  m_Center: {x: -0.10743383, y: 0, z: -1.7253141}
 --- !u!23 &1230950829
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8908,8 +8912,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.7088004}
-  m_Center: {x: -1.4182683e-10, y: 0, z: -0.35440063}
+  m_Size: {x: 1.4196106, y: 1, z: 1.96426}
+  m_Center: {x: 0.20980455, y: 0, z: -0.48213038}
 --- !u!114 &1273378113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9577,8 +9581,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.6770989}
-  m_Center: {x: 1.4057797e-15, y: 0, z: -0.1614502}
+  m_Size: {x: 1, y: 1, z: 0.5843045}
+  m_Center: {x: 5.757029e-16, y: 0, z: -0.20784722}
 --- !u!23 &1375834946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10465,8 +10469,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.709688}
-  m_Center: {x: -0.00000044759267, y: 0, z: -0.35484463}
+  m_Size: {x: 1.4707385, y: 1, z: 2.3121855}
+  m_Center: {x: -0.23536982, y: 0, z: -0.6560944}
 --- !u!114 &1608334386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10867,8 +10871,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9945734, y: 1, z: 1.7071887}
-  m_Center: {x: 0.0027146637, y: 0, z: -0.3535958}
+  m_Size: {x: 1.5175654, y: 1, z: 2.0461047}
+  m_Center: {x: 0.26420853, y: 0, z: -0.5230541}
 --- !u!23 &1686006770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11726,8 +11730,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3283758, y: 1, z: 0.71186155}
-  m_Center: {x: 0.026725695, y: 0, z: -0.14406805}
+  m_Size: {x: 2.3283758, y: 1, z: 0.5005559}
+  m_Center: {x: 0.026725696, y: 0, z: -0.115386024}
 --- !u!1 &1861846518
 GameObject:
   m_ObjectHideFlags: 0
@@ -11859,7 +11863,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.347, y: 1.045, z: -0.827}
-  m_LocalScale: {x: 1.65464, y: 1, z: 2.5178974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 980274314}
@@ -11920,8 +11924,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99457264, y: 1, z: 1.7083113}
-  m_Center: {x: 0.0027146784, y: 0, z: -0.35415608}
+  m_Size: {x: 1.4151727, y: 1, z: 2.0120852}
+  m_Center: {x: 0.21301521, y: 0, z: -0.5060429}
 --- !u!23 &1895007635
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13127,8 +13131,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.7114418}
-  m_Center: {x: -3.578325e-10, y: 0, z: -0.35572138}
+  m_Size: {x: 1.3968868, y: 1, z: 1.8486723}
+  m_Center: {x: -0.19844337, y: 0, z: -0.4243374}
 --- !u!114 &2043073295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13511,7 +13515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 615, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090381245

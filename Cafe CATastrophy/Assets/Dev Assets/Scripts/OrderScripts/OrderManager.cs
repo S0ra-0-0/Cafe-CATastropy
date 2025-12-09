@@ -10,9 +10,9 @@ public class OrderManager : MonoBehaviour
 
     [Header("Order timing")]
     [Tooltip("Minimum time (seconds) for each order before it expires.")]
-    [SerializeField] private int minOrderDuration = 40;
+    [SerializeField] private int minOrderDuration = 100;
     [Tooltip("Maximum time (seconds) for each order before it expires.")]
-    [SerializeField] private int maxOrderDuration = 70;
+    [SerializeField] private int maxOrderDuration = 120;
 
     private class ActiveOrder
     {
